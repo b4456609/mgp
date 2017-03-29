@@ -1,0 +1,21 @@
+[submodule "movie-example"]
+	path = movie-example
+	url = git@github.com:b4456609/movie-example.git
+[submodule "mgp-codegen"]
+	path = mgp-codegen
+	url = git@github.com:b4456609/mgp-codegen.git
+[submodule "mgp-cucumber-report"]
+	path = mgp-cucumber-report
+	url = git@github.com:b4456609/mgp-cucumber-report.git
+[submodule "mgp-mca"]
+	path = mgp-mca
+	url = git@github.com:b4456609/mgp-mca.git
+[submodule "mgp-bdd"]
+	path = mgp-bdd
+	url = git@github.com:b4456609/mgp-bdd.git
+[submodule "mgp-front"]
+	path = mgp-front
+	url = git@github.com:b4456609/mgp-front.git
+[submodule "mgp-back"]
+	path = mgp-back
+	url = git@github.com:b4456609/mgp-back.git
