@@ -1,0 +1,15 @@
+---
+- name: build all jar
+  shell: sh ./buildAll_async.sh
+  args:
+    chdir: /vagrant/movie-example
+
+- name: build example docker container
+  shell: docker-compose build
+  args:
+    chdir: /vagrant/movie-example
+
+- name: run docker
+  shell: docker-compose up -d
+  args:
+    chdir: /vagrant/movie-example
