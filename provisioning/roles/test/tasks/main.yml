@@ -1,0 +1,41 @@
+---
+- name: expose env
+  shell: |
+    export MGP=192.168.33.10:4000
+    export PACT_URL=http://192.168.33.10:8880/
+    export DB_HOST=192.168.33.10
+    export TARGET=movie
+    export MOVIE_HOST=192.168.33.10
+    export MOVIE_PORT=8081
+    export ORDER_HOST=192.168.33.10
+    export ORDER_PORT=8083
+    export THEATER_HOST=192.168.33.10
+    export THEATER_PORT=8084
+    export USER_HOST=192.168.33.10
+    export USER_PORT=8082
+    export ZUUL_URL=http://192.168.33.10:8080/
+
+- name: unit test 
+  shell: |
+    sudo -E bash -c 'sh ./runAllTest.sh'
+  args:
+    chdir: /vagrant/movie-example
+
+- name: service test
+  shell: 
+    export TARGET=movie && ./gradlew clean configure pactVerify; sh ./uploadReport.sh
+    export TARGET=user && ./gradlew clean configure pactVerify; sh ./uploadReport.sh
+    export TARGET=order && ./gradlew clean configure pactVerify; sh ./uploadReport.sh
+    export TARGET=theater && ./gradlew clean configure pactVerify; sh ./uploadReport.sh
+  args:
+    chdir: /vagrant/movie-example/movie-service-test
+
+
+- name: unit test 
+  shell: |
+    export TARGET=movie && ./gradlew clean regression ; sh ./uploadReport.sh
+    export TARGET=user && ./gradlew clean regression ; sh ./uploadReport.sh
+    export TARGET=order && ./gradlew clean regression ; sh ./uploadReport.sh
+    export TARGET=theater && ./gradlew clean regression ; sh ./uploadReport.sh
+  args:
+    chdir: /vagrant/movie-example/movie-uat

@@ -1,5 +1,12 @@
 ---
 - hosts: server
+  tasks:
+    - name: install curl
+      apt:
+        name: curl
+        state: present
+
+- hosts: server
   roles:
      - williamyeh.oracle-java
      - role: angstwad.docker_ubuntu
@@ -8,5 +15,6 @@
      - support
      - mgp
      - movie
+     - test
   vars:
     java_version: 8
