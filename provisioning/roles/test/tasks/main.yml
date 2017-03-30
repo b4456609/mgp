@@ -2,6 +2,7 @@
 - name: set pact broker and uat git repo 
   shell: |
     curl -i --request POST --url http://192.168.33.10:4000/api/setting --header 'content-type: application/json' --data '{"pactHostUrl": "http://192.168.33.10:8880/", "bddGitUrl": "https://github.com/b4456609/movie-uat.git"}'
+    curl -i --request POST http://192.168.33.10:4000/api/update
   register: setting
 
 - debug: var=setting.stdout_lines
