@@ -9,9 +9,7 @@
 - hosts: server
   roles:
      - williamyeh.oracle-java
-     - role: angstwad.docker_ubuntu
-       pip_install_pip: false
-       pip_install_setuptools: false
+     - angstwad.docker_ubuntu
      - support
      - mgp
      - movie
