@@ -10,6 +10,8 @@ movie : run docker ------------------------- 3.49s
 test : unit test ------------------------- 212.23s
 test : service test ----------------------- 32.72s
 test : uat test --------------------------- 46.32s
+
+total 0:23:10.374
 ```
 
 # Run requirement
