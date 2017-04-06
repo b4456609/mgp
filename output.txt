@@ -1,0 +1,1746 @@
+==> default: Attempting graceful shutdown of VM...
+    default: Guest communication could not be established! This is usually because
+    default: SSH is not running, the authentication information was changed,
+    default: or some other networking issue. Vagrant will force halt, if
+    default: capable.
+==> default: Forcing shutdown of VM...
+==> default: Checking if box 'debian/jessie64' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: 
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default: 
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if it's present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: No guest additions were detected on the base box for this VM! Guest
+    default: additions are required for forwarded ports, shared folders, host only
+    default: networking, and more. If SSH fails on this machine, please install
+    default: the guest additions and repackage the box to continue.
+    default: 
+    default: This is not an error message; everything may continue to work properly,
+    default: in which case you may ignore this message.
+==> default: Setting hostname...
+==> default: Configuring and enabling network interfaces...
+==> default: Installing rsync to the VM...
+==> default: Rsyncing folder: /home/bernie/project/mgp/ => /vagrant
+==> default: Running provisioner: ansible...
+    default: Running ansible-playbook...
+
+PLAY [server] ******************************************************************
+
+TASK [setup] *******************************************************************
+Thursday 06 April 2017  15:45:03 +0800 (0:00:00.015)       0:00:00.015 ******** 
+ok: [192.168.33.10]
+
+TASK [install curl] ************************************************************
+Thursday 06 April 2017  15:45:04 +0800 (0:00:00.509)       0:00:00.524 ******** 
+changed: [192.168.33.10]
+
+PLAY [server] ******************************************************************
+
+TASK [setup] *******************************************************************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:02.824)       0:00:03.349 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : precondition - java_version] ********************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.270)       0:00:03.619 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : precondition - java_subversion] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.020)       0:00:03.639 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : precondition - java_install_jce] ****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.021)       0:00:03.660 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set general internal vars] **********************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.021)       0:00:03.682 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set java architecture] **************************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.026)       0:00:03.708 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set java OS for Linux] **************************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.024)       0:00:03.733 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set java OS for Mac OS X] ***********************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.026)       0:00:03.760 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_112] ****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.024)       0:00:03.784 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_111] ****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.027)       0:00:03.812 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_102] ****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.020)       0:00:03.832 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_101] ****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.024)       0:00:03.857 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_92 or 1.8.0_91] *****
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.019)       0:00:03.877 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_77] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.022)       0:00:03.900 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_74] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.024)       0:00:03.924 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_73] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.019)       0:00:03.944 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_72] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.022)       0:00:03.966 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_66] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.024)       0:00:03.990 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_65] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.019)       0:00:04.010 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_60] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.020)       0:00:04.030 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_51] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.022)       0:00:04.053 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_45] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.019)       0:00:04.072 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.8.0_31] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.021)       0:00:04.094 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.7.0_80] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.017)       0:00:04.112 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for 1.7.0_75] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.022)       0:00:04.134 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set internal vars for generic Java version] *****
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.020)       0:00:04.155 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : compose filename, if necessary] *****************
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.017)       0:00:04.173 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : compose url for downloading file, if necessary] *
+Thursday 06 April 2017  15:45:07 +0800 (0:00:00.023)       0:00:04.197 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set JCE variables for java 7] *******************
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.027)       0:00:04.225 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set JCE variables for java 8] *******************
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.018)       0:00:04.243 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set JCE download file] **************************
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.024)       0:00:04.267 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set java installation directory on Debian platforms] ***
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.022)       0:00:04.290 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set java installation directory on Mac OS X] ****
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.021)       0:00:04.311 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : set java installation directory on non-Debian platforms] ***
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.020)       0:00:04.332 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : install libselinux-python binary for Ansible to work] ***
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.023)       0:00:04.355 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : copy scripts to server] *************************
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.017)       0:00:04.372 ******** 
+changed: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : check if specific version of Oracle JDK is installed?] ***
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.528)       0:00:04.901 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : get JDK tarball (as RPM file)] ******************
+Thursday 06 April 2017  15:45:08 +0800 (0:00:00.304)       0:00:05.206 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : get JDK tarball (as tar.gz file)] ***************
+Thursday 06 April 2017  15:45:09 +0800 (0:00:00.037)       0:00:05.243 ******** 
+changed: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : get JDK package (as Mac OS X .dmg)] *************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:14.028)       0:00:19.271 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : copy RPM from local] ****************************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.023)       0:00:19.295 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : copy tarball from local] ************************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.021)       0:00:19.316 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : uninstall messy packages to avoid blocking conditions] ***
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.032)       0:00:19.349 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : delete messy .rpm files to avoid blocking conditions] ***
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.021)       0:00:19.371 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : install JDK via RPM file with yum] **************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.022)       0:00:19.394 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : symlink /usr/sbin/update-alternatives to /usr/sbin/alternatives] ***
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.022)       0:00:19.416 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : check if pkg already installed] *****************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.028)       0:00:19.444 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : install JDK via RPM file with rpm (for zypper)] *
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.024)       0:00:19.469 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : clean up - uninstall messy packages] ************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.025)       0:00:19.494 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : clean up - delete messy .rpm files] *************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.021)       0:00:19.515 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : mkdir for Java] *********************************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.022)       0:00:19.538 ******** 
+changed: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : install JDK via tarball file] *******************
+Thursday 06 April 2017  15:45:23 +0800 (0:00:00.190)       0:00:19.729 ******** 
+changed: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : mount the downloaded dmg] ***********************
+Thursday 06 April 2017  15:45:30 +0800 (0:00:07.439)       0:00:27.168 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : install the pkg file from the dmg] **************
+Thursday 06 April 2017  15:45:30 +0800 (0:00:00.023)       0:00:27.192 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : unmount the downloaded dmg] *********************
+Thursday 06 April 2017  15:45:30 +0800 (0:00:00.021)       0:00:27.213 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : make sure /etc/profile.d exists] ****************
+Thursday 06 April 2017  15:45:31 +0800 (0:00:00.018)       0:00:27.232 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : export JAVA_HOME] *******************************
+Thursday 06 April 2017  15:45:31 +0800 (0:00:00.019)       0:00:27.251 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : link "/usr/lib/jvm/default-java"] ***************
+Thursday 06 April 2017  15:45:31 +0800 (0:00:00.023)       0:00:27.274 ******** 
+changed: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : alternatives link for "java"] *******************
+Thursday 06 April 2017  15:45:31 +0800 (0:00:00.134)       0:00:27.409 ******** 
+changed: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : alternatives link for "javac"] ******************
+Thursday 06 April 2017  15:45:31 +0800 (0:00:00.319)       0:00:27.728 ******** 
+changed: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : alternatives link for "jar"] ********************
+Thursday 06 April 2017  15:45:31 +0800 (0:00:00.201)       0:00:27.929 ******** 
+changed: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : check if "java_sdk" target exists] **************
+Thursday 06 April 2017  15:45:31 +0800 (0:00:00.199)       0:00:28.129 ******** 
+ok: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : alternatives link for "java_sdk"] ***************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.147)       0:00:28.277 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : remove temporary downloaded files, if requested] 
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.025)       0:00:28.302 ******** 
+ok: [192.168.33.10] => (item=/tmp/jdk-8u112-linux-x64.rpm)
+changed: [192.168.33.10] => (item=/tmp/jdk-8u112-linux-x64.tar.gz)
+ok: [192.168.33.10] => (item=/tmp/jdk-8u112-linux-x64.dmg)
+ok: [192.168.33.10] => (item=/tmp/check-tarball-installed.sh)
+
+TASK [williamyeh.oracle-java : Find Java Home in Mac] **************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.627)       0:00:28.929 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : Set java_home] **********************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.010)       0:00:28.940 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : Make sure 'which' is installed] *****************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.009)       0:00:28.949 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : Find Java Home in Linux] ************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.009)       0:00:28.958 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : Set java_home] **********************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.012)       0:00:28.970 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : Check if JCE is already installed] **************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.009)       0:00:28.980 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : get JCE] ****************************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.011)       0:00:28.991 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : copy JCE zip from local] ************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.011)       0:00:29.002 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : install unzip] **********************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.009)       0:00:29.011 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : unzip JCE] **************************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.008)       0:00:29.020 ******** 
+skipping: [192.168.33.10]
+
+TASK [williamyeh.oracle-java : install JCE policies] ***************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.010)       0:00:29.031 ******** 
+skipping: [192.168.33.10] => (item=local_policy.jar) 
+skipping: [192.168.33.10] => (item=US_export_policy.jar) 
+
+TASK [williamyeh.oracle-java : remove temporary downloaded JCE files, if requested] ***
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.014)       0:00:29.045 ******** 
+skipping: [192.168.33.10] => (item=/tmp/jce_policy-8.zip) 
+skipping: [192.168.33.10] => (item=/tmp/UnlimitedJCEPolicyJDK8) 
+
+TASK [angstwad.docker_ubuntu : Fail if not a new release of Ubuntu] ************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.015)       0:00:29.060 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Fail if not a new release of Debian] ************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.017)       0:00:29.078 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Install backported trusty kernel onto 12.04] ****
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.014)       0:00:29.093 ******** 
+skipping: [192.168.33.10] => (item=[]) 
+
+TASK [angstwad.docker_ubuntu : Install Xorg packages for backported kernels (very optional)] ***
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.024)       0:00:29.117 ******** 
+skipping: [192.168.33.10] => (item=[]) 
+
+TASK [angstwad.docker_ubuntu : Install latest kernel for Ubuntu 13.04+] ********
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.020)       0:00:29.137 ******** 
+skipping: [192.168.33.10] => (item=[]) 
+
+TASK [angstwad.docker_ubuntu : Install cgroup-lite for Ubuntu 13.10] ***********
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.022)       0:00:29.160 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Reboot instance] ********************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.015)       0:00:29.175 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Wait for instance to come online (10 minute timeout)] ***
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.015)       0:00:29.191 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Install dmsetup for Ubuntu 16.04] ***************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.014)       0:00:29.205 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Read uname] *************************************
+Thursday 06 April 2017  15:45:32 +0800 (0:00:00.013)       0:00:29.218 ******** 
+[DEPRECATION WARNING]: always_run is deprecated. Use check_mode = no instead..
+
+This feature will be removed in version 2.4. Deprecation warnings can be 
+disabled by setting deprecation_warnings=False in ansible.cfg.
+ok: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Install linux-image-extra-* packages to enable AuFS driver] ***
+Thursday 06 April 2017  15:45:33 +0800 (0:00:00.128)       0:00:29.346 ******** 
+skipping: [192.168.33.10] => (item=[]) 
+
+TASK [angstwad.docker_ubuntu : Run dmsetup for Ubuntu 16.04] *******************
+Thursday 06 April 2017  15:45:33 +0800 (0:00:00.031)       0:00:29.377 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Add Docker repository key] **********************
+Thursday 06 April 2017  15:45:33 +0800 (0:00:00.015)       0:00:29.393 ******** 
+changed: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Alternative | Add Docker repository key] ********
+Thursday 06 April 2017  15:45:34 +0800 (0:00:01.303)       0:00:30.696 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : HTTPS APT transport for Docker repository] ******
+Thursday 06 April 2017  15:45:34 +0800 (0:00:00.012)       0:00:30.708 ******** 
+changed: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Add Docker repository and update apt cache] *****
+Thursday 06 April 2017  15:45:36 +0800 (0:00:02.241)       0:00:32.950 ******** 
+changed: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Install (or update) docker package] *************
+Thursday 06 April 2017  15:45:50 +0800 (0:00:13.313)       0:00:46.264 ******** 
+changed: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Set systemd playbook var] ***********************
+Thursday 06 April 2017  15:46:08 +0800 (0:00:18.073)       0:01:04.338 ******** 
+ok: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Set systemd playbook var] ***********************
+Thursday 06 April 2017  15:46:08 +0800 (0:00:00.018)       0:01:04.356 ******** 
+ok: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Set docker daemon options] **********************
+Thursday 06 April 2017  15:46:08 +0800 (0:00:00.025)       0:01:04.382 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Create systemd configuration directory for Docker service (systemd)] ***
+Thursday 06 April 2017  15:46:08 +0800 (0:00:00.018)       0:01:04.400 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Set docker daemon options (systemd)] ************
+Thursday 06 April 2017  15:46:08 +0800 (0:00:00.017)       0:01:04.418 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Ensure docker daemon options used (systemd)] ****
+Thursday 06 April 2017  15:46:08 +0800 (0:00:00.017)       0:01:04.435 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Fix DNS in docker.io] ***************************
+Thursday 06 April 2017  15:46:08 +0800 (0:00:00.018)       0:01:04.453 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : pause] ******************************************
+Thursday 06 April 2017  15:46:08 +0800 (0:00:00.029)       0:01:04.483 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Install pip, python-dev package with apt] *******
+Thursday 06 April 2017  15:46:08 +0800 (0:00:00.017)       0:01:04.500 ******** 
+changed: [192.168.33.10] => (item=[u'python-dev', u'python-pip'])
+
+TASK [angstwad.docker_ubuntu : Docker-compose version downgrade] ***************
+Thursday 06 April 2017  15:46:48 +0800 (0:00:40.305)       0:01:44.806 ******** 
+ok: [192.168.33.10] => {
+    "msg": "Downgrading docker-compose version to 1.9.0 because of docker-compose > 1.10 requiring docker python package (instead of the docker-py one) which is incompatible with the docker_container module in Ansible < 2.3"
+}
+
+TASK [angstwad.docker_ubuntu : Clean previous docker-py package if installing docker.] ***
+Thursday 06 April 2017  15:46:48 +0800 (0:00:00.021)       0:01:44.827 ******** 
+ok: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Clean previous docker package if installing docker-py.] ***
+Thursday 06 April 2017  15:46:49 +0800 (0:00:00.823)       0:01:45.651 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Install pip, setuptools, docker-py and docker-compose with pip] ***
+Thursday 06 April 2017  15:46:49 +0800 (0:00:00.017)       0:01:45.669 ******** 
+changed: [192.168.33.10] => (item={u'version': u'latest', u'name': u'pip', u'install': True})
+changed: [192.168.33.10] => (item={u'version': u'latest', u'name': u'setuptools', u'install': True})
+skipping: [192.168.33.10] => (item={u'version': u'latest', u'name': u'docker', u'install': False}) 
+changed: [192.168.33.10] => (item={u'version': u'1.9.0', u'name': u'docker-compose', u'install': True})
+
+TASK [angstwad.docker_ubuntu : Check if /etc/updatedb.conf exists] *************
+Thursday 06 April 2017  15:47:19 +0800 (0:00:29.740)       0:02:15.409 ******** 
+ok: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Ensure updatedb does not index /var/lib/docker] *
+Thursday 06 April 2017  15:47:19 +0800 (0:00:00.164)       0:02:15.574 ******** 
+changed: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Check if /etc/default/ufw exists] ***************
+Thursday 06 April 2017  15:47:19 +0800 (0:00:00.280)       0:02:15.855 ******** 
+ok: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Change ufw default forward policy from drop to accept] ***
+Thursday 06 April 2017  15:47:19 +0800 (0:00:00.170)       0:02:16.026 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Set docker HTTP_PROXY if docker_http_proxy defined] ***
+Thursday 06 April 2017  15:47:19 +0800 (0:00:00.016)       0:02:16.042 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Set docker HTTPS_PROXY if docker_https_proxy defined] ***
+Thursday 06 April 2017  15:47:19 +0800 (0:00:00.021)       0:02:16.063 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Start docker] ***********************************
+Thursday 06 April 2017  15:47:19 +0800 (0:00:00.019)       0:02:16.082 ******** 
+ok: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Start docker.io] ********************************
+Thursday 06 April 2017  15:47:20 +0800 (0:00:00.294)       0:02:16.377 ******** 
+skipping: [192.168.33.10]
+
+TASK [angstwad.docker_ubuntu : Add users to the docker group] ******************
+Thursday 06 April 2017  15:47:20 +0800 (0:00:00.015)       0:02:16.393 ******** 
+
+TASK [angstwad.docker_ubuntu : update facts if docker0 is not defined] *********
+Thursday 06 April 2017  15:47:20 +0800 (0:00:00.013)       0:02:16.407 ******** 
+ok: [192.168.33.10]
+
+TASK [support : build pact db docker container] ********************************
+Thursday 06 April 2017  15:47:20 +0800 (0:00:00.310)       0:02:16.717 ******** 
+changed: [192.168.33.10]
+
+TASK [support : run pact broker docker and db] *********************************
+Thursday 06 April 2017  15:47:40 +0800 (0:00:20.084)       0:02:36.801 ******** 
+changed: [192.168.33.10]
+
+TASK [mgp : build mgpback spring boot] *****************************************
+Thursday 06 April 2017  15:48:11 +0800 (0:00:30.578)       0:03:07.380 ******** 
+changed: [192.168.33.10]
+
+TASK [mgp : build container] ***************************************************
+Thursday 06 April 2017  15:49:21 +0800 (0:01:10.753)       0:04:18.134 ******** 
+changed: [192.168.33.10]
+
+TASK [mgp : run container] *****************************************************
+Thursday 06 April 2017  15:58:52 +0800 (0:09:30.988)       0:13:49.123 ******** 
+changed: [192.168.33.10]
+
+TASK [movie : build all jar] ***************************************************
+Thursday 06 April 2017  15:59:23 +0800 (0:00:30.880)       0:14:20.003 ******** 
+changed: [192.168.33.10]
+
+TASK [movie : build example docker container] **********************************
+Thursday 06 April 2017  16:02:42 +0800 (0:03:18.356)       0:17:38.359 ******** 
+changed: [192.168.33.10]
+
+TASK [movie : run docker] ******************************************************
+Thursday 06 April 2017  16:02:54 +0800 (0:00:12.604)       0:17:50.964 ******** 
+changed: [192.168.33.10]
+
+TASK [test : set pact broker and uat git repo] *********************************
+Thursday 06 April 2017  16:02:58 +0800 (0:00:03.488)       0:17:54.453 ******** 
+changed: [192.168.33.10]
+ [WARNING]: Consider using get_url or uri module rather than running curl
+
+TASK [test : debug] ************************************************************
+Thursday 06 April 2017  16:03:22 +0800 (0:00:24.538)       0:18:18.992 ******** 
+ok: [192.168.33.10] => {
+    "setting.stdout_lines": [
+        "HTTP/1.1 200 ", 
+        "Content-Length: 0", 
+        "Date: Thu, 06 Apr 2017 08:03:00 GMT", 
+        "", 
+        "HTTP/1.1 200 ", 
+        "Content-Length: 0", 
+        "Date: Thu, 06 Apr 2017 08:03:20 GMT"
+    ]
+}
+
+TASK [test : unit test] ********************************************************
+Thursday 06 April 2017  16:03:22 +0800 (0:00:00.033)       0:18:19.025 ******** 
+changed: [192.168.33.10]
+
+TASK [test : debug] ************************************************************
+Thursday 06 April 2017  16:06:55 +0800 (0:03:32.232)       0:21:51.257 ******** 
+ok: [192.168.33.10] => {
+    "unit.stdout_lines": [
+        "./movie-service-test", 
+        "./movie-user", 
+        "c8e7c0fcffee454f157e1b0df48aed6db667aa2e1b457e23283cd4cf93fa2637", 
+        ":clean", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 12.804 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        ":compileJava", 
+        ":processResources", 
+        ":classes", 
+        ":compileTestJava", 
+        "Download https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-starter-test/1.5.2.RELEASE/spring-boot-starter-test-1.5.2.RELEASE.pom", 
+        "Download https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-test/1.5.2.RELEASE/spring-boot-test-1.5.2.RELEASE.pom", 
+        "Download https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-test-autoconfigure/1.5.2.RELEASE/spring-boot-test-autoconfigure-1.5.2.RELEASE.pom", 
+        "Download https://repo1.maven.org/maven2/org/assertj/assertj-core/2.6.0/assertj-core-2.6.0.pom", 
+        "Download https://repo1.maven.org/maven2/org/assertj/assertj-parent-pom/2.1.4/assertj-parent-pom-2.1.4.pom", 
+        "Download https://repo1.maven.org/maven2/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.pom", 
+        "Download https://repo1.maven.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom", 
+        "Download https://repo1.maven.org/maven2/org/skyscreamer/jsonassert/1.2.3/jsonassert-1.2.3.pom", 
+        "Download https://repo1.maven.org/maven2/org/springframework/spring-test/4.3.7.RELEASE/spring-test-4.3.7.RELEASE.pom", 
+        "Download https://repo1.maven.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1.pom", 
+        "Download https://repo1.maven.org/maven2/org/objenesis/objenesis-parent/2.1/objenesis-parent-2.1.pom", 
+        "Download https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-starter-test/1.5.2.RELEASE/spring-boot-starter-test-1.5.2.RELEASE.jar", 
+        "Download https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-test/1.5.2.RELEASE/spring-boot-test-1.5.2.RELEASE.jar", 
+        "Download https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-test-autoconfigure/1.5.2.RELEASE/spring-boot-test-autoconfigure-1.5.2.RELEASE.jar", 
+        "Download https://repo1.maven.org/maven2/org/assertj/assertj-core/2.6.0/assertj-core-2.6.0.jar", 
+        "Download https://repo1.maven.org/maven2/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar", 
+        "Download https://repo1.maven.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar", 
+        "Download https://repo1.maven.org/maven2/org/skyscreamer/jsonassert/1.2.3/jsonassert-1.2.3.jar", 
+        "Download https://repo1.maven.org/maven2/org/springframework/spring-test/4.3.7.RELEASE/spring-test-4.3.7.RELEASE.jar", 
+        "Download https://repo1.maven.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1.jar", 
+        ":processTestResources", 
+        ":testClasses", 
+        ":unitTest", 
+        "2017-04-06 08:04:24.046  INFO 9462 --- [       Thread-7] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1be443ab: startup date [Thu Apr 06 08:04:13 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4fe58024", 
+        "2017-04-06 08:04:24.046  INFO 9462 --- [      Thread-11] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2aa76f5d: startup date [Thu Apr 06 08:04:19 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3e65f380", 
+        "2017-04-06 08:04:24.217  INFO 9462 --- [      Thread-11] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:04:24.264  INFO 9462 --- [       Thread-7] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING", 
+        "2017-04-06 08:04:24.495  INFO 9462 --- [       Thread-7] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application user with eureka with status DOWN", 
+        "2017-04-06 08:04:24.620  INFO 9462 --- [       Thread-7] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson", 
+        "2017-04-06 08:04:24.621  INFO 9462 --- [       Thread-7] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson", 
+        "2017-04-06 08:04:24.791  INFO 9462 --- [       Thread-7] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml", 
+        "2017-04-06 08:04:24.793  INFO 9462 --- [       Thread-7] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml", 
+        "2017-04-06 08:04:24.997  INFO 9462 --- [       Thread-7] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration", 
+        "2017-04-06 08:04:25.066  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Disable delta property : false", 
+        "2017-04-06 08:04:25.067  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null", 
+        "2017-04-06 08:04:25.067  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false", 
+        "2017-04-06 08:04:25.068  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Application is null : false", 
+        "2017-04-06 08:04:25.068  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true", 
+        "2017-04-06 08:04:25.068  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Application version is -1: true", 
+        "2017-04-06 08:04:25.069  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server", 
+        "2017-04-06 08:04:25.308  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : The response status is 200", 
+        "2017-04-06 08:04:25.322  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30", 
+        "2017-04-06 08:04:25.325  INFO 9462 --- [       Thread-7] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4", 
+        "2017-04-06 08:04:25.331  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1491465865330 with initial instances count: 1", 
+        "2017-04-06 08:04:25.354  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...", 
+        "2017-04-06 08:04:25.355  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...", 
+        "2017-04-06 08:04:25.367  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER/10.0.2.15:user:-1 - deregister  status: 404", 
+        "2017-04-06 08:04:25.377  INFO 9462 --- [       Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient", 
+        "2017-04-06 08:04:25.379  INFO 9462 --- [       Thread-7] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:04:25.379  INFO 9462 --- [       Thread-7] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 36.698 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "testmongo", 
+        "testmongo", 
+        "HTTP/1.1 100 Continue", 
+        "", 
+        "HTTP/1.1 200 ", 
+        "Content-Length: 0", 
+        "Date: Thu, 06 Apr 2017 08:04:29 GMT", 
+        "", 
+        "./movie-order", 
+        "776e8a7c4db98d6f6ac5ee073ed7c6389007c5d088f2a14ed56006c55fc85b14", 
+        ":clean", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 7.69 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        ":compileJava", 
+        ":processResources", 
+        ":classes", 
+        ":compileTestJava", 
+        ":processTestResources", 
+        ":testClasses", 
+        ":unitTest", 
+        "2017-04-06 08:05:02.987  INFO 9823 --- [       Thread-7] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ba8f2ab: startup date [Thu Apr 06 08:04:52 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7cc2a57a", 
+        "2017-04-06 08:05:02.989  INFO 9823 --- [      Thread-11] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5c67adeb: startup date [Thu Apr 06 08:05:00 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6d938802", 
+        "2017-04-06 08:05:02.998  INFO 9823 --- [       Thread-7] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:05:03.015  INFO 9823 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5ff4f422: startup date [Thu Apr 06 08:04:56 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ba8f2ab", 
+        "2017-04-06 08:05:03.019  INFO 9823 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@74e640cd: startup date [Thu Apr 06 08:04:55 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ba8f2ab", 
+        "2017-04-06 08:05:03.023  INFO 9823 --- [       Thread-7] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:2}] to 192.168.33.10:27017 because the pool has been closed.", 
+        "2017-04-06 08:05:03.041  INFO 9823 --- [      Thread-11] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING", 
+        "2017-04-06 08:05:03.059  INFO 9823 --- [      Thread-11] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application order with eureka with status DOWN", 
+        "2017-04-06 08:05:03.180  INFO 9823 --- [      Thread-11] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson", 
+        "2017-04-06 08:05:03.180  INFO 9823 --- [      Thread-11] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson", 
+        "2017-04-06 08:05:03.318  INFO 9823 --- [      Thread-11] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml", 
+        "2017-04-06 08:05:03.319  INFO 9823 --- [      Thread-11] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml", 
+        "2017-04-06 08:05:03.515  INFO 9823 --- [      Thread-11] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration", 
+        "2017-04-06 08:05:03.526  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Disable delta property : false", 
+        "2017-04-06 08:05:03.527  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null", 
+        "2017-04-06 08:05:03.527  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false", 
+        "2017-04-06 08:05:03.528  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Application is null : false", 
+        "2017-04-06 08:05:03.528  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true", 
+        "2017-04-06 08:05:03.528  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Application version is -1: true", 
+        "2017-04-06 08:05:03.529  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server", 
+        "2017-04-06 08:05:03.637  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : The response status is 200", 
+        "2017-04-06 08:05:03.639  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30", 
+        "2017-04-06 08:05:03.641  INFO 9823 --- [      Thread-11] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4", 
+        "2017-04-06 08:05:03.643  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1491465903643 with initial instances count: 5", 
+        "2017-04-06 08:05:03.666  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...", 
+        "2017-04-06 08:05:03.667  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Unregistering ...", 
+        "2017-04-06 08:05:03.676  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ORDER/10.0.2.15:order:-1 - deregister  status: 404", 
+        "2017-04-06 08:05:03.680  INFO 9823 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient", 
+        "2017-04-06 08:05:03.682  INFO 9823 --- [      Thread-11] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:05:03.682  INFO 9823 --- [      Thread-11] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0", 
+        "2017-04-06 08:05:03.687  INFO 9823 --- [      Thread-11] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6d776a67: startup date [Thu Apr 06 08:05:01 GMT+00:00 2017]; parent: org.springframework.web.context.support.GenericWebApplicationContext@5c67adeb", 
+        "2017-04-06 08:05:03.692  WARN 9823 --- [      Thread-11] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent", 
+        "", 
+        "org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081) [mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961) [mca-all.jar:na]", 
+        "\tat org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70) [spring-cloud-context-1.1.7.RELEASE.jar:1.1.7.RELEASE]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928) [mca-all.jar:na]", 
+        "", 
+        "2017-04-06 08:05:03.699  INFO 9823 --- [      Thread-11] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@421b8875: startup date [Thu Apr 06 08:05:01 GMT+00:00 2017]; parent: org.springframework.web.context.support.GenericWebApplicationContext@5c67adeb", 
+        "2017-04-06 08:05:03.699  WARN 9823 --- [      Thread-11] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent", 
+        "", 
+        "org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081) [mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961) [mca-all.jar:na]", 
+        "\tat org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70) [spring-cloud-context-1.1.7.RELEASE.jar:1.1.7.RELEASE]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928) [mca-all.jar:na]", 
+        "", 
+        "2017-04-06 08:05:03.705  INFO 9823 --- [      Thread-11] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:4, serverValue:4}] to 192.168.33.10:27017 because the pool has been closed.", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 24.398 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        ":compileJava UP-TO-DATE", 
+        ":processResources UP-TO-DATE", 
+        ":classes UP-TO-DATE", 
+        ":compileTestJava UP-TO-DATE", 
+        ":processTestResources UP-TO-DATE", 
+        ":testClasses UP-TO-DATE", 
+        ":clientTest", 
+        "2017-04-06 08:05:21.262  INFO 9930 --- [      Thread-10] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater", 
+        "2017-04-06 08:05:21.264  INFO 9930 --- [       Thread-7] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56369578: startup date [Thu Apr 06 08:05:13 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4136a04a", 
+        "2017-04-06 08:05:21.266  INFO 9930 --- [       Thread-7] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:05:21.281  INFO 9930 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a37ddc6: startup date [Thu Apr 06 08:05:19 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56369578", 
+        "2017-04-06 08:05:21.283  INFO 9930 --- [       Thread-7] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-theater", 
+        "2017-04-06 08:05:21.288  INFO 9930 --- [       Thread-7] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)", 
+        "", 
+        "java.lang.IllegalStateException: Shutdown in progress", 
+        "\tat java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_112]", 
+        "\tat java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_112]", 
+        "\tat com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.1.1.jar:na]", 
+        "\tat com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:614) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:886) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:274) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]", 
+        "\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]", 
+        "\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]", 
+        "\tat java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:364) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:287) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961) [mca-all.jar:na]", 
+        "\tat org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70) [spring-cloud-context-1.1.7.RELEASE.jar:1.1.7.RELEASE]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928) [mca-all.jar:na]", 
+        "", 
+        "2017-04-06 08:05:21.306  INFO 9930 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5951ea5f: startup date [Thu Apr 06 08:05:20 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56369578", 
+        "2017-04-06 08:05:21.308  INFO 9930 --- [       Thread-7] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-user", 
+        "2017-04-06 08:05:21.312  INFO 9930 --- [       Thread-7] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)", 
+        "", 
+        "java.lang.IllegalStateException: Shutdown in progress", 
+        "\tat java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_112]", 
+        "\tat java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_112]", 
+        "\tat com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.1.1.jar:na]", 
+        "\tat com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:614) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:886) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:274) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]", 
+        "\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]", 
+        "\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]", 
+        "\tat java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:364) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:287) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961) [mca-all.jar:na]", 
+        "\tat org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70) [spring-cloud-context-1.1.7.RELEASE.jar:1.1.7.RELEASE]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928) [mca-all.jar:na]", 
+        "", 
+        "2017-04-06 08:05:21.328  INFO 9930 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@279965b7: startup date [Thu Apr 06 08:05:16 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56369578", 
+        "2017-04-06 08:05:21.331  INFO 9930 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@38feb874: startup date [Thu Apr 06 08:05:16 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56369578", 
+        "2017-04-06 08:05:21.335  INFO 9930 --- [       Thread-7] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:6}] to 192.168.33.10:27017 because the pool has been closed.", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 17.506 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "testmongo", 
+        "testmongo", 
+        "HTTP/1.1 100 Continue", 
+        "", 
+        "HTTP/1.1 200 ", 
+        "Content-Length: 0", 
+        "Date: Thu, 06 Apr 2017 08:05:22 GMT", 
+        "", 
+        ":pactPublish", 
+        "Publishing order-theater.json ... null", 
+        "Publishing order-user.json ... null", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 5.308 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "./movie-movie", 
+        "100222d9bcdf6c338aa167fc64efe017ba61b63889c49c66e8bdac4ad85b881b", 
+        ":clean", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 3.591 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        ":compileJava", 
+        ":processResources", 
+        ":classes", 
+        ":compileTestJava", 
+        ":processTestResources", 
+        ":testClasses", 
+        ":unitTest", 
+        "2017-04-06 08:05:57.757  INFO 10322 --- [      Thread-12] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@769dfcef: startup date [Thu Apr 06 08:05:51 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31004753", 
+        "2017-04-06 08:05:57.757  INFO 10322 --- [       Thread-8] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77cea32d: startup date [Thu Apr 06 08:05:43 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@43d78c01", 
+        "2017-04-06 08:05:57.758  INFO 10322 --- [      Thread-15] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4d83621c: startup date [Thu Apr 06 08:05:55 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@338b9581", 
+        "2017-04-06 08:05:57.770  INFO 10322 --- [      Thread-12] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:05:57.775  INFO 10322 --- [       Thread-8] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application movie with eureka with status DOWN", 
+        "2017-04-06 08:05:57.776  WARN 10322 --- [       Thread-8] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1491465957776, current=DOWN, previous=UP]", 
+        "2017-04-06 08:05:57.776  INFO 10322 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MOVIE/10.0.2.15:movie:0: registering service...", 
+        "2017-04-06 08:05:57.778  INFO 10322 --- [       Thread-8] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...", 
+        "2017-04-06 08:05:57.779  INFO 10322 --- [       Thread-8] com.netflix.discovery.DiscoveryClient    : Unregistering ...", 
+        "2017-04-06 08:05:57.784  INFO 10322 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MOVIE/10.0.2.15:movie:0 - registration status: 204", 
+        "2017-04-06 08:05:57.792  INFO 10322 --- [      Thread-15] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:05:57.807  INFO 10322 --- [       Thread-8] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MOVIE/10.0.2.15:movie:0 - deregister  status: 200", 
+        "2017-04-06 08:05:57.808  INFO 10322 --- [      Thread-15] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:4, serverValue:4}] to localhost:27017 because the pool has been closed.", 
+        "2017-04-06 08:05:57.817  INFO 10322 --- [       Thread-8] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient", 
+        "2017-04-06 08:05:57.820  INFO 10322 --- [       Thread-8] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:05:57.821  INFO 10322 --- [       Thread-8] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 25.051 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "testmongo", 
+        "testmongo", 
+        "HTTP/1.1 100 Continue", 
+        "", 
+        "HTTP/1.1 200 ", 
+        "Content-Length: 0", 
+        "Date: Thu, 06 Apr 2017 08:05:58 GMT", 
+        "", 
+        "./movie-zuul", 
+        "./movie-eureka", 
+        "./movie-uat", 
+        "./movie-theater", 
+        "70ae74821e819834b8e3fc20b26f8361160627349a87cc18a970886721df6643", 
+        ":clean", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 4.562 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        ":compileJava", 
+        ":processResources", 
+        ":classes", 
+        ":compileTestJava", 
+        ":processTestResources", 
+        ":testClasses", 
+        ":unitTest", 
+        "2017-04-06 08:06:26.653  INFO 10682 --- [      Thread-11] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@f3b535: startup date [Thu Apr 06 08:06:24 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@61f99720", 
+        "2017-04-06 08:06:26.655  INFO 10682 --- [       Thread-7] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69e8d728: startup date [Thu Apr 06 08:06:16 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7cc2a57a", 
+        "2017-04-06 08:06:26.671  INFO 10682 --- [       Thread-7] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:06:26.675  INFO 10682 --- [      Thread-11] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING", 
+        "2017-04-06 08:06:26.681  INFO 10682 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5b43de79: startup date [Thu Apr 06 08:06:20 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69e8d728", 
+        "2017-04-06 08:06:26.694  INFO 10682 --- [      Thread-11] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application theater with eureka with status DOWN", 
+        "2017-04-06 08:06:26.782  INFO 10682 --- [      Thread-11] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson", 
+        "2017-04-06 08:06:26.782  INFO 10682 --- [      Thread-11] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson", 
+        "2017-04-06 08:06:26.881  INFO 10682 --- [      Thread-11] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml", 
+        "2017-04-06 08:06:26.881  INFO 10682 --- [      Thread-11] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml", 
+        "2017-04-06 08:06:27.054  INFO 10682 --- [      Thread-11] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration", 
+        "2017-04-06 08:06:27.067  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Disable delta property : false", 
+        "2017-04-06 08:06:27.068  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null", 
+        "2017-04-06 08:06:27.068  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false", 
+        "2017-04-06 08:06:27.068  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Application is null : false", 
+        "2017-04-06 08:06:27.068  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true", 
+        "2017-04-06 08:06:27.068  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Application version is -1: true", 
+        "2017-04-06 08:06:27.068  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server", 
+        "2017-04-06 08:06:27.167  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : The response status is 200", 
+        "2017-04-06 08:06:27.169  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30", 
+        "2017-04-06 08:06:27.171  INFO 10682 --- [      Thread-11] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4", 
+        "2017-04-06 08:06:27.173  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1491465987173 with initial instances count: 5", 
+        "2017-04-06 08:06:27.200  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...", 
+        "2017-04-06 08:06:27.200  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Unregistering ...", 
+        "2017-04-06 08:06:27.209  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_THEATER/10.0.2.15:theater:-1 - deregister  status: 404", 
+        "2017-04-06 08:06:27.213  INFO 10682 --- [      Thread-11] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient", 
+        "2017-04-06 08:06:27.215  INFO 10682 --- [      Thread-11] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:06:27.215  INFO 10682 --- [      Thread-11] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0", 
+        "2017-04-06 08:06:27.219  INFO 10682 --- [      Thread-11] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@15a36827: startup date [Thu Apr 06 08:06:24 GMT+00:00 2017]; parent: org.springframework.web.context.support.GenericWebApplicationContext@f3b535", 
+        "2017-04-06 08:06:27.224  WARN 10682 --- [      Thread-11] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent", 
+        "", 
+        "org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081) [mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961) [mca-all.jar:na]", 
+        "\tat org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70) [spring-cloud-context-1.1.7.RELEASE.jar:1.1.7.RELEASE]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928) [mca-all.jar:na]", 
+        "", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 22.732 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        ":compileJava UP-TO-DATE", 
+        ":processResources UP-TO-DATE", 
+        ":classes UP-TO-DATE", 
+        ":compileTestJava UP-TO-DATE", 
+        ":processTestResources UP-TO-DATE", 
+        ":testClasses UP-TO-DATE", 
+        ":clientTest", 
+        "2017-04-06 08:06:46.559  INFO 10788 --- [      Thread-10] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater", 
+        "2017-04-06 08:06:46.564  INFO 10788 --- [       Thread-7] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c0ed0e: startup date [Thu Apr 06 08:06:37 GMT+00:00 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1d060609", 
+        "2017-04-06 08:06:46.575  INFO 10788 --- [       Thread-7] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647", 
+        "2017-04-06 08:06:46.583  INFO 10788 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5f2dab3c: startup date [Thu Apr 06 08:06:45 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c0ed0e", 
+        "2017-04-06 08:06:46.585  INFO 10788 --- [       Thread-7] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-movie", 
+        "2017-04-06 08:06:46.594  INFO 10788 --- [       Thread-7] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)", 
+        "", 
+        "java.lang.IllegalStateException: Shutdown in progress", 
+        "\tat java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_112]", 
+        "\tat java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_112]", 
+        "\tat com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.1.1.jar:na]", 
+        "\tat com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:614) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:886) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:274) [ribbon-loadbalancer-2.2.0.jar:2.2.0]", 
+        "\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]", 
+        "\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]", 
+        "\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]", 
+        "\tat java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:364) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:287) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961) [mca-all.jar:na]", 
+        "\tat org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70) [spring-cloud-context-1.1.7.RELEASE.jar:1.1.7.RELEASE]", 
+        "\tat org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [mca-all.jar:na]", 
+        "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [mca-all.jar:na]", 
+        "\tat org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928) [mca-all.jar:na]", 
+        "", 
+        "2017-04-06 08:06:46.625  INFO 10788 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@48bd48df: startup date [Thu Apr 06 08:06:41 GMT+00:00 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c0ed0e", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 19.345 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "testmongo", 
+        "testmongo", 
+        "HTTP/1.1 100 Continue", 
+        "", 
+        "HTTP/1.1 200 ", 
+        "Content-Length: 0", 
+        "Date: Thu, 06 Apr 2017 08:06:47 GMT", 
+        "", 
+        ":pactPublish", 
+        "Publishing theater-movie.json ... null", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 4.458 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html"
+    ]
+}
+
+TASK [test : service test] *****************************************************
+Thursday 06 April 2017  16:06:55 +0800 (0:00:00.026)       0:21:51.283 ******** 
+changed: [192.168.33.10]
+
+TASK [test : debug] ************************************************************
+Thursday 06 April 2017  16:07:27 +0800 (0:00:32.723)       0:22:24.007 ******** 
+ok: [192.168.33.10] => {
+    "service.stdout_lines": [
+        "[{\"provider\":\"movie\",\"host\":\"MOVIE_HOST\",\"port\":\"MOVIE_PORT\",\"hasPactWith\":[{\"consumer\":\"theater\",\"pactFile\":\"http://192.168.33.10:8880/pacts/provider/movie/consumer/theater/version/0.0.2\"}]}]", 
+        "[au.com.dius.pact.provider.ProviderInfo(http, 192.168.33.10, 8081, /, movie, null, null, null, null, null, false, null, changeit, null, true, false, null, [], [au.com.dius.pact.provider.ConsumerInfo(theater, http://192.168.33.10:8880/pacts/provider/movie/consumer/theater/version/0.0.2, http://192.168.33.10:8081/serviceTest, true, null, null, null)])]", 
+        ":clean UP-TO-DATE", 
+        ":configure UP-TO-DATE", 
+        ":compileJava UP-TO-DATE", 
+        ":processResources UP-TO-DATE", 
+        ":classes UP-TO-DATE", 
+        ":compileTestJava UP-TO-DATE", 
+        ":processTestResources UP-TO-DATE", 
+        ":testClasses UP-TO-DATE", 
+        ":pactVerify_movie", 
+        "", 
+        "Verifying a pact between theater and movie", 
+        "  [from URL http://192.168.33.10:8880/pacts/provider/movie/consumer/theater/version/0.0.2]", 
+        "  Given The La la land exists in db And id is '5ef2bf0d-6dbf-4de8-a095-93690854da5b'", 
+        "  Get la la land movie detail", 
+        "    returns a response which", 
+        "      has status code 200 (OK)", 
+        "      includes headers", 
+        "        \"Content-Type\" with value \"application/json; charset=UTF-8\" (OK)", 
+        "      has a matching body (OK)", 
+        ":pactVerify", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 7.99 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "uplaod command", 
+        "curl -X POST -H \"Content-Type: multipart/form-data\" -F \"files=@./build/reports/pact/movie.md\" -F \"files=@./build/reports/pact/movie.json\" http://192.168.33.10:4000/api/test/serviceTest", 
+        "[{\"provider\":\"user\",\"host\":\"USER_HOST\",\"port\":\"USER_PORT\",\"hasPactWith\":[{\"consumer\":\"order\",\"pactFile\":\"http://192.168.33.10:8880/pacts/provider/user/consumer/order/version/0.0.1\"}]}]", 
+        "[au.com.dius.pact.provider.ProviderInfo(http, 192.168.33.10, 8082, /, user, null, null, null, null, null, false, null, changeit, null, true, false, null, [], [au.com.dius.pact.provider.ConsumerInfo(order, http://192.168.33.10:8880/pacts/provider/user/consumer/order/version/0.0.1, http://192.168.33.10:8082/serviceTest, true, null, null, null)])]", 
+        ":clean", 
+        ":configure UP-TO-DATE", 
+        ":compileJava UP-TO-DATE", 
+        ":processResources UP-TO-DATE", 
+        ":classes UP-TO-DATE", 
+        ":compileTestJava UP-TO-DATE", 
+        ":processTestResources UP-TO-DATE", 
+        ":testClasses UP-TO-DATE", 
+        ":pactVerify_user", 
+        "", 
+        "Verifying a pact between order and user", 
+        "  [from URL http://192.168.33.10:8880/pacts/provider/user/consumer/order/version/0.0.1]", 
+        "  Given The user, Ben, is exists", 
+        "  Get la la land movie detail", 
+        "    returns a response which", 
+        "      has status code 200 (OK)", 
+        "      includes headers", 
+        "        \"Content-Type\" with value \"application/json; charset=UTF-8\" (OK)", 
+        "      has a matching body (OK)", 
+        ":pactVerify", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 10.387 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "uplaod command", 
+        "curl -X POST -H \"Content-Type: multipart/form-data\" -F \"files=@./build/reports/pact/user.json\" -F \"files=@./build/reports/pact/user.md\" http://192.168.33.10:4000/api/test/serviceTest", 
+        "[{\"provider\":\"theater\",\"host\":\"THEATER_HOST\",\"port\":\"THEATER_PORT\",\"hasPactWith\":[{\"consumer\":\"order\",\"pactFile\":\"http://192.168.33.10:8880/pacts/provider/theater/consumer/order/version/0.0.1\"}]},{\"provider\":\"user\",\"host\":\"USER_HOST\",\"port\":\"USER_PORT\",\"hasPactWith\":[{\"consumer\":\"order\",\"pactFile\":\"http://192.168.33.10:8880/pacts/provider/user/consumer/order/version/0.0.1\"}]}]", 
+        "[au.com.dius.pact.provider.ProviderInfo(http, 192.168.33.10, 8084, /, theater, null, null, null, null, null, false, null, changeit, null, true, false, null, [], [au.com.dius.pact.provider.ConsumerInfo(order, http://192.168.33.10:8880/pacts/provider/theater/consumer/order/version/0.0.1, http://192.168.33.10:8084/serviceTest, true, null, null, null)]), au.com.dius.pact.provider.ProviderInfo(http, 192.168.33.10, 8082, /, user, null, null, null, null, null, false, null, changeit, null, true, false, null, [], [au.com.dius.pact.provider.ConsumerInfo(order, http://192.168.33.10:8880/pacts/provider/user/consumer/order/version/0.0.1, http://192.168.33.10:8082/serviceTest, true, null, null, null)])]", 
+        ":clean", 
+        ":configure UP-TO-DATE", 
+        ":compileJava UP-TO-DATE", 
+        ":processResources UP-TO-DATE", 
+        ":classes UP-TO-DATE", 
+        ":compileTestJava UP-TO-DATE", 
+        ":processTestResources UP-TO-DATE", 
+        ":testClasses UP-TO-DATE", 
+        ":pactVerify_theater", 
+        "", 
+        "Verifying a pact between order and theater", 
+        "  [from URL http://192.168.33.10:8880/pacts/provider/theater/consumer/order/version/0.0.1]", 
+        "  Given The show id'5ef2bf0d-6dbf-4de8-a095-93690854da5b' is exist and has 2 more seats", 
+        "  Get la la land movie detail", 
+        "    returns a response which", 
+        "      has status code 200 (OK)", 
+        "      includes headers", 
+        "        \"Content-Type\" with value \"application/json; charset=UTF-8\" (OK)", 
+        "      has a matching body (OK)", 
+        ":pactVerify_user", 
+        "", 
+        "Verifying a pact between order and user", 
+        "  [from URL http://192.168.33.10:8880/pacts/provider/user/consumer/order/version/0.0.1]", 
+        "  Given The user, Ben, is exists", 
+        "  Get la la land movie detail", 
+        "    returns a response which", 
+        "      has status code 200 (OK)", 
+        "      includes headers", 
+        "        \"Content-Type\" with value \"application/json; charset=UTF-8\" (OK)", 
+        "      has a matching body (OK)", 
+        ":pactVerify", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 6.04 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "uplaod command", 
+        "curl -X POST -H \"Content-Type: multipart/form-data\" -F \"files=@./build/reports/pact/theater.json\" -F \"files=@./build/reports/pact/theater.md\" http://192.168.33.10:4000/api/test/serviceTest", 
+        "[{\"provider\":\"movie\",\"host\":\"MOVIE_HOST\",\"port\":\"MOVIE_PORT\",\"hasPactWith\":[{\"consumer\":\"theater\",\"pactFile\":\"http://192.168.33.10:8880/pacts/provider/movie/consumer/theater/version/0.0.2\"}]},{\"provider\":\"theater\",\"host\":\"THEATER_HOST\",\"port\":\"THEATER_PORT\",\"hasPactWith\":[{\"consumer\":\"order\",\"pactFile\":\"http://192.168.33.10:8880/pacts/provider/theater/consumer/order/version/0.0.1\"}]}]", 
+        "[au.com.dius.pact.provider.ProviderInfo(http, 192.168.33.10, 8081, /, movie, null, null, null, null, null, false, null, changeit, null, true, false, null, [], [au.com.dius.pact.provider.ConsumerInfo(theater, http://192.168.33.10:8880/pacts/provider/movie/consumer/theater/version/0.0.2, http://192.168.33.10:8081/serviceTest, true, null, null, null)]), au.com.dius.pact.provider.ProviderInfo(http, 192.168.33.10, 8084, /, theater, null, null, null, null, null, false, null, changeit, null, true, false, null, [], [au.com.dius.pact.provider.ConsumerInfo(order, http://192.168.33.10:8880/pacts/provider/theater/consumer/order/version/0.0.1, http://192.168.33.10:8084/serviceTest, true, null, null, null)])]", 
+        ":clean", 
+        ":configure UP-TO-DATE", 
+        ":compileJava UP-TO-DATE", 
+        ":processResources UP-TO-DATE", 
+        ":classes UP-TO-DATE", 
+        ":compileTestJava UP-TO-DATE", 
+        ":processTestResources UP-TO-DATE", 
+        ":testClasses UP-TO-DATE", 
+        ":pactVerify_movie", 
+        "", 
+        "Verifying a pact between theater and movie", 
+        "  [from URL http://192.168.33.10:8880/pacts/provider/movie/consumer/theater/version/0.0.2]", 
+        "  Given The La la land exists in db And id is '5ef2bf0d-6dbf-4de8-a095-93690854da5b'", 
+        "  Get la la land movie detail", 
+        "    returns a response which", 
+        "      has status code 200 (OK)", 
+        "      includes headers", 
+        "        \"Content-Type\" with value \"application/json; charset=UTF-8\" (OK)", 
+        "      has a matching body (OK)", 
+        ":pactVerify_theater", 
+        "", 
+        "Verifying a pact between order and theater", 
+        "  [from URL http://192.168.33.10:8880/pacts/provider/theater/consumer/order/version/0.0.1]", 
+        "  Given The show id'5ef2bf0d-6dbf-4de8-a095-93690854da5b' is exist and has 2 more seats", 
+        "  Get la la land movie detail", 
+        "    returns a response which", 
+        "      has status code 200 (OK)", 
+        "      includes headers", 
+        "        \"Content-Type\" with value \"application/json; charset=UTF-8\" (OK)", 
+        "      has a matching body (OK)", 
+        ":pactVerify", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 4.619 secs", 
+        "", 
+        "This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html", 
+        "uplaod command", 
+        "curl -X POST -H \"Content-Type: multipart/form-data\" -F \"files=@./build/reports/pact/movie.md\" -F \"files=@./build/reports/pact/movie.json\" http://192.168.33.10:4000/api/test/serviceTest"
+    ]
+}
+
+TASK [test : uat test] *********************************************************
+Thursday 06 April 2017  16:07:27 +0800 (0:00:00.017)       0:22:24.025 ******** 
+changed: [192.168.33.10]
+
+TASK [test : debug] ************************************************************
+Thursday 06 April 2017  16:08:14 +0800 (0:00:46.317)       0:23:10.343 ******** 
+ok: [192.168.33.10] => {
+    "uat.stdout_lines": [
+        ":clean UP-TO-DATE", 
+        ":compileJava", 
+        "Download https://jcenter.bintray.com/com/google/guava/guava/20.0/guava-20.0.pom", 
+        "Download https://jcenter.bintray.com/com/google/guava/guava-parent/20.0/guava-parent-20.0.pom", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.pom", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-jvm/1.2.5/cucumber-jvm-1.2.5.pom", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5.pom", 
+        "Download https://jcenter.bintray.com/com/squareup/retrofit2/retrofit/2.2.0/retrofit-2.2.0.pom", 
+        "Download https://jcenter.bintray.com/com/squareup/retrofit2/parent/2.2.0/parent-2.2.0.pom", 
+        "Download https://jcenter.bintray.com/joda-time/joda-time/2.9.7/joda-time-2.9.7.pom", 
+        "Download https://jcenter.bintray.com/org/json/json/20160810/json-20160810.pom", 
+        "Download https://jcenter.bintray.com/com/squareup/retrofit2/converter-jackson/2.2.0/converter-jackson-2.2.0.pom", 
+        "Download https://jcenter.bintray.com/com/squareup/retrofit2/retrofit-converters/2.2.0/retrofit-converters-2.2.0.pom", 
+        "Download https://jcenter.bintray.com/org/projectlombok/lombok-maven/1.16.14.0/lombok-maven-1.16.14.0.pom", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.pom", 
+        "Download https://jcenter.bintray.com/com/squareup/okhttp3/okhttp/3.6.0/okhttp-3.6.0.pom", 
+        "Download https://jcenter.bintray.com/com/squareup/okhttp3/parent/3.6.0/parent-3.6.0.pom", 
+        "Download https://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.7.2/jackson-databind-2.7.2.pom", 
+        "Download https://jcenter.bintray.com/com/fasterxml/jackson/jackson-parent/2.7/jackson-parent-2.7.pom", 
+        "Download https://jcenter.bintray.com/com/fasterxml/oss-parent/25/oss-parent-25.pom", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3.pom", 
+        "Download https://jcenter.bintray.com/org/sonatype/oss/oss-parent/6/oss-parent-6.pom", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.pom", 
+        "Download https://jcenter.bintray.com/info/cukes/gherkin/2.12.2/gherkin-2.12.2.pom", 
+        "Download https://jcenter.bintray.com/com/squareup/okio/okio/1.11.0/okio-1.11.0.pom", 
+        "Download https://jcenter.bintray.com/com/squareup/okio/okio-parent/1.11.0/okio-parent-1.11.0.pom", 
+        "Download https://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.7.0/jackson-annotations-2.7.0.pom", 
+        "Download https://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.7.2/jackson-core-2.7.2.pom", 
+        "Download https://jcenter.bintray.com/com/google/guava/guava/20.0/guava-20.0.jar", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5.jar", 
+        "Download https://jcenter.bintray.com/com/squareup/retrofit2/retrofit/2.2.0/retrofit-2.2.0.jar", 
+        "Download https://jcenter.bintray.com/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar", 
+        "Download https://jcenter.bintray.com/org/json/json/20160810/json-20160810.jar", 
+        "Download https://jcenter.bintray.com/com/squareup/retrofit2/converter-jackson/2.2.0/converter-jackson-2.2.0.jar", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar", 
+        "Download https://jcenter.bintray.com/com/squareup/okhttp3/okhttp/3.6.0/okhttp-3.6.0.jar", 
+        "Download https://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.7.2/jackson-databind-2.7.2.jar", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3.jar", 
+        "Download https://jcenter.bintray.com/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar", 
+        "Download https://jcenter.bintray.com/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar", 
+        "Download https://jcenter.bintray.com/com/squareup/okio/okio/1.11.0/okio-1.11.0.jar", 
+        "Download https://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.7.0/jackson-annotations-2.7.0.jar", 
+        "Download https://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.7.2/jackson-core-2.7.2.jar", 
+        ":processResources UP-TO-DATE", 
+        ":classes", 
+        ":jar", 
+        ":assemble", 
+        ":compileTestJava", 
+        "Download https://jcenter.bintray.com/org/assertj/assertj-core/3.6.2/assertj-core-3.6.2.pom", 
+        "Download https://jcenter.bintray.com/org/assertj/assertj-core/3.6.2/assertj-core-3.6.2.jar", 
+        ":regression", 
+        "@movie_endpoint_/find_GET,@movie_endpoint_/_POST", 
+        "[--plugin, html:output, --plugin, json:build/cucumber/cucumber.json, --plugin, pretty, --plugin, progress:build/cucumber/cucumber.txt, --plugin, usage:build/cucumber/usage.txt, --glue, ntou.soselab.movie, src/test/resources, --tags, @movie_endpoint_/find_GET,@movie_endpoint_/_POST]", 
+        "Feature: Movie Detail", 
+        "", 
+        "", 
+        "  Background:                         \u001b[90m# ntou/soselab/movie/movieDetail.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following movies exist:\u001b[0m \u001b[90m# MovieDetail.the_following_movies_exist(String>>)\u001b[0m", 
+        "", 
+        "  @movie_endpoint_/find_GET", 
+        "  Scenario: View All Movie Detail \u001b[90m# ntou/soselab/movie/movieDetail.feature:9\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m            \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI view all movies detail\u001b[0m \u001b[90m# MovieDetail.i_view_all_movies_detail()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mI get \u001b[0m\u001b[32m\u001b[1m3\u001b[0m\u001b[32m movies detail\u001b[0m    \u001b[90m# MovieDetail.i_get_movies_detail(int)\u001b[0m", 
+        "", 
+        "  @movie_endpoint_/find_GET", 
+        "  Scenario Outline: View a Specific Movie Detail \u001b[90m# ntou/soselab/movie/movieDetail.feature:15\u001b[0m", 
+        "    \u001b[36mGiven \u001b[0m\u001b[36mI am a guest\u001b[0m", 
+        "    \u001b[36mAnd \u001b[0m\u001b[36mI provide a <movieName>\u001b[0m", 
+        "    \u001b[36mWhen \u001b[0m\u001b[36mI view <movieName> detail\u001b[0m", 
+        "    \u001b[36mThen \u001b[0m\u001b[36mThe <movieName> should be exist\u001b[0m", 
+        "", 
+        "    Examples: ", 
+        "", 
+        "", 
+        "  Background:                         \u001b[90m# ntou/soselab/movie/movieDetail.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following movies exist:\u001b[0m \u001b[90m# MovieDetail.the_following_movies_exist(String>>)\u001b[0m", 
+        "", 
+        "", 
+        "  @movie_endpoint_/find_GET", 
+        "  Scenario Outline: View a Specific Movie Detail \u001b[90m# ntou/soselab/movie/movieDetail.feature:23\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m                           \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI provide a La La Land\u001b[0m                   \u001b[90m# MovieDetail.i_provide_a_La_La_Land()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI view La La Land detail\u001b[0m                \u001b[90m# MovieDetail.i_view_La_La_Land_detail()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mThe La La Land should be exist\u001b[0m          \u001b[90m# MovieDetail.The_LaLaLand_should_be_exist()\u001b[0m", 
+        "", 
+        "  Background:                         \u001b[90m# ntou/soselab/movie/movieDetail.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following movies exist:\u001b[0m \u001b[90m# MovieDetail.the_following_movies_exist(String>>)\u001b[0m", 
+        "", 
+        "", 
+        "  @movie_endpoint_/find_GET", 
+        "  Scenario Outline: View a Specific Movie Detail \u001b[90m# ntou/soselab/movie/movieDetail.feature:24\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m                           \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI provide a Moonlight\u001b[0m                    \u001b[90m# MovieDetail.i_provide_a_Moonlight()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI view Moonlight detail\u001b[0m                 \u001b[90m# MovieDetail.i_view_Moonlight_detail()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mThe Moonlight should be exist\u001b[0m           \u001b[90m# MovieDetail.The_Moonlight_should_be_exist()\u001b[0m", 
+        "", 
+        "  Background:                         \u001b[90m# ntou/soselab/movie/movieDetail.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following movies exist:\u001b[0m \u001b[90m# MovieDetail.the_following_movies_exist(String>>)\u001b[0m", 
+        "", 
+        "  @movie_endpoint_/find_GET", 
+        "  Scenario Outline: View a Specific Movie Detail \u001b[90m# ntou/soselab/movie/movieDetail.feature:25\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m                           \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI provide a Zootopia\u001b[0m                     \u001b[90m# MovieDetail.i_provide_a_Zootopia()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI view Zootopia detail\u001b[0m                  \u001b[90m# MovieDetail.i_view_Zootopia_detail()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mThe Zootopia should be exist\u001b[0m            \u001b[90m# MovieDetail.The_Zootopia_should_be_exist()\u001b[0m", 
+        "Feature: Ticket", 
+        "", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/ticket.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following user exist:\u001b[0m \u001b[90m# OrderTest.the_following_the_user_exist(OrderUser>)\u001b[0m", 
+        "MovieDTO{id='4e2a589e-cd86-446a-aa2b-234ccb3ce70b', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f75e7b78610001eb2617', capacity=40}", 
+        "ShowDTO{id='c2239301-fe3f-4812-8a11-db3f520af42c', theaterId='58e5f75e7b78610001eb2617', movieId='4e2a589e-cd86-446a-aa2b-234ccb3ce70b', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='c2239301-fe3f-4812-8a11-db3f520af42c', theaterId='58e5f75e7b78610001eb2617', movieId='4e2a589e-cd86-446a-aa2b-234ccb3ce70b', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "500", 
+        "null", 
+        "", 
+        "", 
+        "  @order_endpoint_/book_POST @theater_endpoint_/show_POST @movie_endpoint_/_POST @theater_endpoint_/_POST", 
+        "  Scenario: Book tickets                   \u001b[90m# ntou/soselab/movie/ticket.feature:11\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe show exist:\u001b[0m                  \u001b[90m# OrderTest.the_show_exist(Timetable>)\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mThe user book a La La Land ticket\u001b[0m \u001b[90m# OrderTest.the_user_book_a_La_La_Land_ticket()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mSuccessful book the ticket\u001b[0m        \u001b[90m# OrderTest.successful_book_the_ticket()\u001b[0m", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/ticket.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following user exist:\u001b[0m \u001b[90m# OrderTest.the_following_the_user_exist(OrderUser>)\u001b[0m", 
+        "MovieDTO{id='6ec2f549-ca25-40e9-a61a-613e451a1671', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f7627b78610001eb2618', capacity=40}", 
+        "ShowDTO{id='31261c5e-5d7b-4a62-8293-943b1086fe81', theaterId='58e5f7627b78610001eb2618', movieId='6ec2f549-ca25-40e9-a61a-613e451a1671', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='31261c5e-5d7b-4a62-8293-943b1086fe81', theaterId='58e5f7627b78610001eb2618', movieId='6ec2f549-ca25-40e9-a61a-613e451a1671', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='31261c5e-5d7b-4a62-8293-943b1086fe81', theaterId='58e5f7627b78610001eb2618', movieId='6ec2f549-ca25-40e9-a61a-613e451a1671', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "", 
+        "  @order_endpoint_/tickets/{orderId}_POST @order_endpoint_/book_POST @theater_endpoint_/show_POST @movie_endpoint_/_POST @theater_endpoint_/_POST", 
+        "  Scenario: Pick up tickets                    \u001b[90m# ntou/soselab/movie/ticket.feature:23\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe show exist:\u001b[0m                      \u001b[90m# OrderTest.the_show_exist(Timetable>)\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mBen has a order which is not picked up\u001b[0m \u001b[90m# OrderTest.ben_has_a_order_which_is_not_picked_up()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mThe Ben pick the ticket\u001b[0m               \u001b[90m# OrderTest.the_Ben_pick_the_ticket()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mSuccessful pick up the ticket\u001b[0m         \u001b[90m# OrderTest.successful_pick_up_the_ticket()\u001b[0m", 
+        "", 
+        "6 Scenarios (\u001b[32m6 passed\u001b[0m)", 
+        "28 Steps (\u001b[32m28 passed\u001b[0m)", 
+        "0m6.976s", 
+        "", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 36.575 secs", 
+        "uplaod command", 
+        "curl -X POST -H \"Content-Type: multipart/form-data\" -F \"file=@./build/cucumber/cucumber.json\" http://192.168.33.10:4000/api/test/uat", 
+        ":clean", 
+        ":compileJava", 
+        ":processResources UP-TO-DATE", 
+        ":classes", 
+        ":jar", 
+        ":assemble", 
+        ":compileTestJava", 
+        ":regression", 
+        "@user_endpoint_/registration_POST", 
+        "[--plugin, html:output, --plugin, json:build/cucumber/cucumber.json, --plugin, pretty, --plugin, progress:build/cucumber/cucumber.txt, --plugin, usage:build/cucumber/usage.txt, --glue, ntou.soselab.movie, src/test/resources, --tags, @user_endpoint_/registration_POST]", 
+        "Feature: User Registraion", 
+        "", 
+        "  @user_endpoint_/registration_POST", 
+        "  Scenario Outline: User Registraion           \u001b[90m# ntou/soselab/movie/user.feature:4\u001b[0m", 
+        "    \u001b[36mGiven \u001b[0m\u001b[36mI am a unregister user\u001b[0m", 
+        "    \u001b[36mAnd \u001b[0m\u001b[36mI provide a <name>\u001b[0m", 
+        "    \u001b[36mAnd \u001b[0m\u001b[36mI provide a <phone>\u001b[0m", 
+        "    \u001b[36mWhen \u001b[0m\u001b[36mI register the account\u001b[0m", 
+        "    \u001b[36mThen \u001b[0m\u001b[36mI got my user id\u001b[0m", 
+        "    \u001b[36mAnd \u001b[0m\u001b[36mI can check my name is <name>\u001b[0m", 
+        "    \u001b[36mAnd \u001b[0m\u001b[36mI can check my phone number is <phone>\u001b[0m", 
+        "", 
+        "    Examples: ", 
+        "", 
+        "", 
+        "", 
+        "  @user_endpoint_/registration_POST", 
+        "  Scenario Outline: User Registraion              \u001b[90m# ntou/soselab/movie/user.feature:15\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a unregister user\u001b[0m                  \u001b[90m# UserTest.i_am_a_unregister_user()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI provide a Ben\u001b[0m                           \u001b[90m# UserTest.i_provide_a_Ben()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI provide a \u001b[0m\u001b[32m\u001b[1m1234567890\u001b[0m                    \u001b[90m# UserTest.i_provide_a(int)\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI register the account\u001b[0m                   \u001b[90m# UserTest.i_register_the_account()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mI got my user id\u001b[0m                         \u001b[90m# UserTest.i_got_my_user_id()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI can check my name is Ben\u001b[0m                \u001b[90m# UserTest.i_can_check_my_name_is_Ben()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI can check my phone number is \u001b[0m\u001b[32m\u001b[1m1234567890\u001b[0m \u001b[90m# UserTest.i_can_check_my_phone_number_is(int)\u001b[0m", 
+        "", 
+        "  @user_endpoint_/registration_POST", 
+        "  Scenario Outline: User Registraion              \u001b[90m# ntou/soselab/movie/user.feature:16\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a unregister user\u001b[0m                  \u001b[90m# UserTest.i_am_a_unregister_user()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI provide a Marry\u001b[0m                         \u001b[90m# UserTest.i_provide_a_Marry()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI provide a \u001b[0m\u001b[32m\u001b[1m1234523590\u001b[0m                    \u001b[90m# UserTest.i_provide_a(int)\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI register the account\u001b[0m                   \u001b[90m# UserTest.i_register_the_account()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mI got my user id\u001b[0m                         \u001b[90m# UserTest.i_got_my_user_id()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI can check my name is Marry\u001b[0m              \u001b[90m# UserTest.i_can_check_my_name_is_Marry()\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mI can check my phone number is \u001b[0m\u001b[32m\u001b[1m1234523590\u001b[0m \u001b[90m# UserTest.i_can_check_my_phone_number_is(int)\u001b[0m", 
+        "", 
+        "2 Scenarios (\u001b[32m2 passed\u001b[0m)", 
+        "14 Steps (\u001b[32m14 passed\u001b[0m)", 
+        "0m0.596s", 
+        "", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 1.942 secs", 
+        "uplaod command", 
+        "curl -X POST -H \"Content-Type: multipart/form-data\" -F \"file=@./build/cucumber/cucumber.json\" http://192.168.33.10:4000/api/test/uat", 
+        ":clean", 
+        ":compileJava", 
+        ":processResources UP-TO-DATE", 
+        ":classes", 
+        ":jar", 
+        ":assemble", 
+        ":compileTestJava", 
+        ":regression", 
+        "@order_endpoint_/book_POST,@order_endpoint_/tickets/{orderId}_POST", 
+        "[--plugin, html:output, --plugin, json:build/cucumber/cucumber.json, --plugin, pretty, --plugin, progress:build/cucumber/cucumber.txt, --plugin, usage:build/cucumber/usage.txt, --glue, ntou.soselab.movie, src/test/resources, --tags, @order_endpoint_/book_POST,@order_endpoint_/tickets/{orderId}_POST]", 
+        "Feature: Ticket", 
+        "", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/ticket.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following user exist:\u001b[0m \u001b[90m# OrderTest.the_following_the_user_exist(OrderUser>)\u001b[0m", 
+        "MovieDTO{id='9df892d9-8de4-46eb-a92c-c54a1a4effe8', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f7667b78610001eb2619', capacity=40}", 
+        "ShowDTO{id='5e5d415c-a44d-4ba6-b10a-19c8c5319d9a', theaterId='58e5f7667b78610001eb2619', movieId='9df892d9-8de4-46eb-a92c-c54a1a4effe8', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='5e5d415c-a44d-4ba6-b10a-19c8c5319d9a', theaterId='58e5f7667b78610001eb2619', movieId='9df892d9-8de4-46eb-a92c-c54a1a4effe8', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "200", 
+        "BookDTO{id='a4a498e1-3384-4836-bc17-07f007454e99', showId='5e5d415c-a44d-4ba6-b10a-19c8c5319d9a', ticket=1, userId='null'}", 
+        "", 
+        "", 
+        "  @order_endpoint_/book_POST @theater_endpoint_/show_POST @movie_endpoint_/_POST @theater_endpoint_/_POST", 
+        "  Scenario: Book tickets                   \u001b[90m# ntou/soselab/movie/ticket.feature:11\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe show exist:\u001b[0m                  \u001b[90m# OrderTest.the_show_exist(Timetable>)\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mThe user book a La La Land ticket\u001b[0m \u001b[90m# OrderTest.the_user_book_a_La_La_Land_ticket()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mSuccessful book the ticket\u001b[0m        \u001b[90m# OrderTest.successful_book_the_ticket()\u001b[0m", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/ticket.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following user exist:\u001b[0m \u001b[90m# OrderTest.the_following_the_user_exist(OrderUser>)\u001b[0m", 
+        "MovieDTO{id='3c712d6f-a973-4f10-ab94-d5bc08416472', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f7667b78610001eb261a', capacity=40}", 
+        "ShowDTO{id='8927e6f6-3eb5-4a69-a596-31f3fa86cd49', theaterId='58e5f7667b78610001eb261a', movieId='3c712d6f-a973-4f10-ab94-d5bc08416472', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='8927e6f6-3eb5-4a69-a596-31f3fa86cd49', theaterId='58e5f7667b78610001eb261a', movieId='3c712d6f-a973-4f10-ab94-d5bc08416472', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='8927e6f6-3eb5-4a69-a596-31f3fa86cd49', theaterId='58e5f7667b78610001eb261a', movieId='3c712d6f-a973-4f10-ab94-d5bc08416472', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "", 
+        "  @order_endpoint_/tickets/{orderId}_POST @order_endpoint_/book_POST @theater_endpoint_/show_POST @movie_endpoint_/_POST @theater_endpoint_/_POST", 
+        "  Scenario: Pick up tickets                    \u001b[90m# ntou/soselab/movie/ticket.feature:23\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe show exist:\u001b[0m                      \u001b[90m# OrderTest.the_show_exist(Timetable>)\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mBen has a order which is not picked up\u001b[0m \u001b[90m# OrderTest.ben_has_a_order_which_is_not_picked_up()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mThe Ben pick the ticket\u001b[0m               \u001b[90m# OrderTest.the_Ben_pick_the_ticket()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mSuccessful pick up the ticket\u001b[0m         \u001b[90m# OrderTest.successful_pick_up_the_ticket()\u001b[0m", 
+        "", 
+        "2 Scenarios (\u001b[32m2 passed\u001b[0m)", 
+        "9 Steps (\u001b[32m9 passed\u001b[0m)", 
+        "0m0.797s", 
+        "", 
+        "", 
+        "BUILD SUCCESSFUL", 
+        "", 
+        "Total time: 1.979 secs", 
+        "uplaod command", 
+        "curl -X POST -H \"Content-Type: multipart/form-data\" -F \"file=@./build/cucumber/cucumber.json\" http://192.168.33.10:4000/api/test/uat", 
+        ":clean", 
+        ":compileJava", 
+        ":processResources UP-TO-DATE", 
+        ":classes", 
+        ":jar", 
+        ":assemble", 
+        ":compileTestJava", 
+        ":regression", 
+        "@theater_endpoint_/timetable_GET,@theater_endpoint_/show_POST,@theater_endpoint_/_POST", 
+        "[--plugin, html:output, --plugin, json:build/cucumber/cucumber.json, --plugin, pretty, --plugin, progress:build/cucumber/cucumber.txt, --plugin, usage:build/cucumber/usage.txt, --glue, ntou.soselab.movie, src/test/resources, --tags, @theater_endpoint_/timetable_GET,@theater_endpoint_/show_POST,@theater_endpoint_/_POST]", 
+        "Feature: Movie Timetable", 
+        "", 
+        "MovieDTO{id='5a328eba-7409-44f2-b54a-b973e45fea20', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f7687b78610001eb261b', capacity=40}", 
+        "ShowDTO{id='57e1cde5-b5cc-4b11-a416-afaaf49ea33a', theaterId='58e5f7687b78610001eb261b', movieId='5a328eba-7409-44f2-b54a-b973e45fea20', start=1490522400000, end=1490529600000, emptySeat=21}", 
+        "MovieDTO{id='42656c30-2b5f-469a-89be-cbc1c5685426', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f7687b78610001eb261c', capacity=40}", 
+        "ShowDTO{id='f10d303e-b735-4d11-821b-ea0ca5a92db4', theaterId='58e5f7687b78610001eb261c', movieId='42656c30-2b5f-469a-89be-cbc1c5685426', start=1490523000000, end=1490530200000, emptySeat=12}", 
+        "MovieDTO{id='6bdfaa85-f369-4282-b240-c8c301654bbb', title='Moonlight', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f7687b78610001eb261d', capacity=40}", 
+        "ShowDTO{id='c0cc495e-b4ca-439e-a594-8ea8b4f65d02', theaterId='58e5f7687b78610001eb261d', movieId='6bdfaa85-f369-4282-b240-c8c301654bbb', start=1490523600000, end=1490530800000, emptySeat=2}", 
+        "MovieDTO{id='a15a3e08-0b8e-42f6-9a18-44a4c12487e1', title='Zootopia', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f7687b78610001eb261e', capacity=40}", 
+        "ShowDTO{id='1c79db73-e1a0-4b4b-bdf8-cd6530e1ad1b', theaterId='58e5f7687b78610001eb261e', movieId='a15a3e08-0b8e-42f6-9a18-44a4c12487e1', start=1490533200000, end=1490540400000, emptySeat=0}", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/movieTimetable.feature:3\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following show exist:\u001b[0m \u001b[90m# TimetableTest.the_following_show_exist(Timetable>)\u001b[0m", 
+        "", 
+        "  @theater_endpoint_/timetable_GET", 
+        "  Scenario: View Movie Timetable  \u001b[90m# ntou/soselab/movie/movieTimetable.feature:12\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m            \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[31mWhen \u001b[0m\u001b[31mI view timetable\u001b[0m         \u001b[90m# TimetableTest.i_view_timetable()\u001b[0m", 
+        "      \u001b[31morg.junit.ComparisonFailure: expected:<[2]00> but was:<[5]00>", 
+        "      \tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)", 
+        "      \tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)", 
+        "      \tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)", 
+        "      \tat ntou.soselab.movie.TimetableTest.i_view_timetable(TimetableTest.java:71)", 
+        "      \tat ✽.When I view timetable(ntou/soselab/movie/movieTimetable.feature:14)", 
+        "      \u001b[0m", 
+        "    \u001b[36mThen \u001b[0m\u001b[36mI get \u001b[0m\u001b[36m\u001b[1m4\u001b[0m\u001b[36m show information\u001b[0m \u001b[90m# TimetableTest.i_get_show_information(int)\u001b[0m", 
+        "", 
+        "  @theater_endpoint_/timetable_GET", 
+        "  Scenario Outline: View Show Detail                       \u001b[90m# ntou/soselab/movie/movieTimetable.feature:18\u001b[0m", 
+        "    \u001b[36mGiven \u001b[0m\u001b[36mI am a guest\u001b[0m", 
+        "    \u001b[36mWhen \u001b[0m\u001b[36mI view show, <movie>, detail\u001b[0m", 
+        "    \u001b[36mThen \u001b[0m\u001b[36mThe number of result should be <resultNumber>\u001b[0m", 
+        "    \u001b[36mAnd \u001b[0m\u001b[36m<emptySeat> empty seat should be exist in one item\u001b[0m", 
+        "", 
+        "    Examples: ", 
+        "", 
+        "MovieDTO{id='f56b8f13-f0d4-4256-8e70-647aaff0e2f8', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76a7b78610001eb261f', capacity=40}", 
+        "ShowDTO{id='3903e1df-1a07-4206-a810-1bcc0a79cf84', theaterId='58e5f76a7b78610001eb261f', movieId='f56b8f13-f0d4-4256-8e70-647aaff0e2f8', start=1490522400000, end=1490529600000, emptySeat=21}", 
+        "MovieDTO{id='9f3f2690-2db1-49bf-b82a-f475d92249e2', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76a7b78610001eb2620', capacity=40}", 
+        "ShowDTO{id='f4ad76fe-5c88-47be-93c1-1eda85c3df75', theaterId='58e5f76a7b78610001eb2620', movieId='9f3f2690-2db1-49bf-b82a-f475d92249e2', start=1490523000000, end=1490530200000, emptySeat=12}", 
+        "MovieDTO{id='98a638c1-3b67-4d43-a0cb-157469b7cf37', title='Moonlight', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76a7b78610001eb2621', capacity=40}", 
+        "ShowDTO{id='d6cc587d-ac76-4151-a985-8ba486212994', theaterId='58e5f76a7b78610001eb2621', movieId='98a638c1-3b67-4d43-a0cb-157469b7cf37', start=1490523600000, end=1490530800000, emptySeat=2}", 
+        "MovieDTO{id='238a563f-389a-4267-ac79-4bee16dd3b25', title='Zootopia', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76a7b78610001eb2622', capacity=40}", 
+        "ShowDTO{id='11675b49-b4d7-4026-929e-d32a0a05d26d', theaterId='58e5f76a7b78610001eb2622', movieId='238a563f-389a-4267-ac79-4bee16dd3b25', start=1490533200000, end=1490540400000, emptySeat=0}", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/movieTimetable.feature:3\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following show exist:\u001b[0m \u001b[90m# TimetableTest.the_following_show_exist(Timetable>)\u001b[0m", 
+        "[TimeTableDTO{theaterId='58e5f76a7b78610001eb261f', movieName='La La Land', runTime='128 min', start=1490522400000, emptySeat=21}, TimeTableDTO{theaterId='58e5f76a7b78610001eb2620', movieName='La La Land', runTime='128 min', start=1490523000000, emptySeat=12}]", 
+        "", 
+        "", 
+        "  @theater_endpoint_/timetable_GET", 
+        "  Scenario Outline: View Show Detail              \u001b[90m# ntou/soselab/movie/movieTimetable.feature:26\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m                            \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI view show, \u001b[0m\u001b[32m\u001b[1mLa La Land\u001b[0m\u001b[32m, detail\u001b[0m          \u001b[90m# TimetableTest.iViewShowMovieDetail(String)\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mThe number of result should be \u001b[0m\u001b[32m\u001b[1m2\u001b[0m         \u001b[90m# TimetableTest.the_number_of_result_should_be(int)\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32m\u001b[0m\u001b[32m\u001b[1m21\u001b[0m\u001b[32m empty seat should be exist in one item\u001b[0m \u001b[90m# TimetableTest.empty_seat_should_be_exist_in_one_item(int)\u001b[0m", 
+        "MovieDTO{id='c91c0375-1478-40f1-9db3-0f206682f53f', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76a7b78610001eb2623', capacity=40}", 
+        "ShowDTO{id='330fdf10-d4d1-49be-9f30-704c7980c34b', theaterId='58e5f76a7b78610001eb2623', movieId='c91c0375-1478-40f1-9db3-0f206682f53f', start=1490522400000, end=1490529600000, emptySeat=21}", 
+        "MovieDTO{id='b7834a38-583d-4980-99a6-ec08b5d8cebc', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76a7b78610001eb2624', capacity=40}", 
+        "ShowDTO{id='56453e62-a278-475d-bab5-010822544360', theaterId='58e5f76a7b78610001eb2624', movieId='b7834a38-583d-4980-99a6-ec08b5d8cebc', start=1490523000000, end=1490530200000, emptySeat=12}", 
+        "MovieDTO{id='d8966a9a-9f3e-4b27-93b6-738b419014c4', title='Moonlight', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76a7b78610001eb2625', capacity=40}", 
+        "ShowDTO{id='70718061-1489-4984-943c-8fd806ad9707', theaterId='58e5f76a7b78610001eb2625', movieId='d8966a9a-9f3e-4b27-93b6-738b419014c4', start=1490523600000, end=1490530800000, emptySeat=2}", 
+        "MovieDTO{id='81777023-34b2-4eff-95ba-859af0472553', title='Zootopia', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76a7b78610001eb2626', capacity=40}", 
+        "ShowDTO{id='089a939b-5223-436e-9ab1-502192443208', theaterId='58e5f76a7b78610001eb2626', movieId='81777023-34b2-4eff-95ba-859af0472553', start=1490533200000, end=1490540400000, emptySeat=0}", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/movieTimetable.feature:3\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following show exist:\u001b[0m \u001b[90m# TimetableTest.the_following_show_exist(Timetable>)\u001b[0m", 
+        "[TimeTableDTO{theaterId='58e5f76a7b78610001eb2623', movieName='La La Land', runTime='128 min', start=1490522400000, emptySeat=21}, TimeTableDTO{theaterId='58e5f76a7b78610001eb2624', movieName='La La Land', runTime='128 min', start=1490523000000, emptySeat=12}]", 
+        "", 
+        "", 
+        "  @theater_endpoint_/timetable_GET", 
+        "  Scenario Outline: View Show Detail              \u001b[90m# ntou/soselab/movie/movieTimetable.feature:27\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m                            \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI view show, \u001b[0m\u001b[32m\u001b[1mLa La Land\u001b[0m\u001b[32m, detail\u001b[0m          \u001b[90m# TimetableTest.iViewShowMovieDetail(String)\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mThe number of result should be \u001b[0m\u001b[32m\u001b[1m2\u001b[0m         \u001b[90m# TimetableTest.the_number_of_result_should_be(int)\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32m\u001b[0m\u001b[32m\u001b[1m12\u001b[0m\u001b[32m empty seat should be exist in one item\u001b[0m \u001b[90m# TimetableTest.empty_seat_should_be_exist_in_one_item(int)\u001b[0m", 
+        "MovieDTO{id='da7bd45d-c97f-4564-ad3d-6e804db49be9', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb2627', capacity=40}", 
+        "ShowDTO{id='383ce4f5-e2c0-44c4-b829-b74d86764f54', theaterId='58e5f76b7b78610001eb2627', movieId='da7bd45d-c97f-4564-ad3d-6e804db49be9', start=1490522400000, end=1490529600000, emptySeat=21}", 
+        "MovieDTO{id='1e6694ce-cc07-4efd-9cef-b16e98e6faee', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb2628', capacity=40}", 
+        "ShowDTO{id='c510738e-ab2f-4c2b-8fd7-080cee646ad2', theaterId='58e5f76b7b78610001eb2628', movieId='1e6694ce-cc07-4efd-9cef-b16e98e6faee', start=1490523000000, end=1490530200000, emptySeat=12}", 
+        "MovieDTO{id='63ac55f3-cdfd-47ff-ac93-d2126acf100c', title='Moonlight', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb2629', capacity=40}", 
+        "ShowDTO{id='b9826db7-20be-492b-961b-bdcc2395c3a0', theaterId='58e5f76b7b78610001eb2629', movieId='63ac55f3-cdfd-47ff-ac93-d2126acf100c', start=1490523600000, end=1490530800000, emptySeat=2}", 
+        "MovieDTO{id='bb58eeb9-0db0-4642-b15d-4909b746bae9', title='Zootopia', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb262a', capacity=40}", 
+        "ShowDTO{id='e6bf5051-ed35-49a6-978b-dea67d78137a', theaterId='58e5f76b7b78610001eb262a', movieId='bb58eeb9-0db0-4642-b15d-4909b746bae9', start=1490533200000, end=1490540400000, emptySeat=0}", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/movieTimetable.feature:3\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following show exist:\u001b[0m \u001b[90m# TimetableTest.the_following_show_exist(Timetable>)\u001b[0m", 
+        "[TimeTableDTO{theaterId='58e5f76b7b78610001eb2629', movieName='Moonlight', runTime='128 min', start=1490523600000, emptySeat=2}]", 
+        "", 
+        "", 
+        "  @theater_endpoint_/timetable_GET", 
+        "  Scenario Outline: View Show Detail             \u001b[90m# ntou/soselab/movie/movieTimetable.feature:28\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m                           \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI view show, \u001b[0m\u001b[32m\u001b[1mMoonlight\u001b[0m\u001b[32m, detail\u001b[0m          \u001b[90m# TimetableTest.iViewShowMovieDetail(String)\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mThe number of result should be \u001b[0m\u001b[32m\u001b[1m1\u001b[0m        \u001b[90m# TimetableTest.the_number_of_result_should_be(int)\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32m\u001b[0m\u001b[32m\u001b[1m2\u001b[0m\u001b[32m empty seat should be exist in one item\u001b[0m \u001b[90m# TimetableTest.empty_seat_should_be_exist_in_one_item(int)\u001b[0m", 
+        "MovieDTO{id='8f9f1dae-7713-4878-a4de-922abdc1f6fd', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb262b', capacity=40}", 
+        "ShowDTO{id='f09be44b-6aaf-4176-8b59-c5196d5706d9', theaterId='58e5f76b7b78610001eb262b', movieId='8f9f1dae-7713-4878-a4de-922abdc1f6fd', start=1490522400000, end=1490529600000, emptySeat=21}", 
+        "MovieDTO{id='055a8da5-01c0-4de2-b592-8d539c73bbdc', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb262c', capacity=40}", 
+        "ShowDTO{id='bec952a1-a78f-49ff-a3e9-e02c5ab03d5c', theaterId='58e5f76b7b78610001eb262c', movieId='055a8da5-01c0-4de2-b592-8d539c73bbdc', start=1490523000000, end=1490530200000, emptySeat=12}", 
+        "MovieDTO{id='2675afda-5a91-40c4-962a-595b721c55b7', title='Moonlight', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb262d', capacity=40}", 
+        "ShowDTO{id='adda1d44-9677-4a27-8c62-4c873627b80e', theaterId='58e5f76b7b78610001eb262d', movieId='2675afda-5a91-40c4-962a-595b721c55b7', start=1490523600000, end=1490530800000, emptySeat=2}", 
+        "MovieDTO{id='73a2dc1d-aa07-42de-a919-39549e5668bc', title='Zootopia', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb262e', capacity=40}", 
+        "ShowDTO{id='e09bf64c-1ea9-4a3f-9688-548097b02627', theaterId='58e5f76b7b78610001eb262e', movieId='73a2dc1d-aa07-42de-a919-39549e5668bc', start=1490533200000, end=1490540400000, emptySeat=0}", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/movieTimetable.feature:3\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following show exist:\u001b[0m \u001b[90m# TimetableTest.the_following_show_exist(Timetable>)\u001b[0m", 
+        "[TimeTableDTO{theaterId='58e5f76b7b78610001eb262e', movieName='Zootopia', runTime='128 min', start=1490533200000, emptySeat=0}]", 
+        "", 
+        "  @theater_endpoint_/timetable_GET", 
+        "  Scenario Outline: View Show Detail             \u001b[90m# ntou/soselab/movie/movieTimetable.feature:29\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mI am a guest\u001b[0m                           \u001b[90m# MovieDetail.i_am_a_guest()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mI view show, \u001b[0m\u001b[32m\u001b[1mZootopia\u001b[0m\u001b[32m, detail\u001b[0m           \u001b[90m# TimetableTest.iViewShowMovieDetail(String)\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mThe number of result should be \u001b[0m\u001b[32m\u001b[1m1\u001b[0m        \u001b[90m# TimetableTest.the_number_of_result_should_be(int)\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32m\u001b[0m\u001b[32m\u001b[1m0\u001b[0m\u001b[32m empty seat should be exist in one item\u001b[0m \u001b[90m# TimetableTest.empty_seat_should_be_exist_in_one_item(int)\u001b[0m", 
+        "Feature: Ticket", 
+        "", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/ticket.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following user exist:\u001b[0m \u001b[90m# OrderTest.the_following_the_user_exist(OrderUser>)\u001b[0m", 
+        "MovieDTO{id='ab5d9fdf-bfc6-42a8-81e3-f53e724beb60', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb262f', capacity=40}", 
+        "ShowDTO{id='1ee95fac-5dce-4863-ad41-ba78f32cdc24', theaterId='58e5f76b7b78610001eb262f', movieId='ab5d9fdf-bfc6-42a8-81e3-f53e724beb60', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='1ee95fac-5dce-4863-ad41-ba78f32cdc24', theaterId='58e5f76b7b78610001eb262f', movieId='ab5d9fdf-bfc6-42a8-81e3-f53e724beb60', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "200", 
+        "BookDTO{id='a6d3895a-9ec6-4709-8b5c-de6a961068e7', showId='1ee95fac-5dce-4863-ad41-ba78f32cdc24', ticket=1, userId='null'}", 
+        "", 
+        "", 
+        "  @order_endpoint_/book_POST @theater_endpoint_/show_POST @movie_endpoint_/_POST @theater_endpoint_/_POST", 
+        "  Scenario: Book tickets                   \u001b[90m# ntou/soselab/movie/ticket.feature:11\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe show exist:\u001b[0m                  \u001b[90m# OrderTest.the_show_exist(Timetable>)\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mThe user book a La La Land ticket\u001b[0m \u001b[90m# OrderTest.the_user_book_a_La_La_Land_ticket()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mSuccessful book the ticket\u001b[0m        \u001b[90m# OrderTest.successful_book_the_ticket()\u001b[0m", 
+        "", 
+        "  Background:                       \u001b[90m# ntou/soselab/movie/ticket.feature:2\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe following user exist:\u001b[0m \u001b[90m# OrderTest.the_following_the_user_exist(OrderUser>)\u001b[0m", 
+        "MovieDTO{id='c0352cff-4677-4e09-a023-dfd78d66566c', title='La La Land', year='2016', rated='PG-13', runTime='128 min', genre='Comedy, Drama, Musical', director='Damien Chazelle', actors='Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters', plot='A jazz pianist falls for an aspiring actress in Los Angeles.'}", 
+        "TheaterDTO{id='58e5f76b7b78610001eb2630', capacity=40}", 
+        "ShowDTO{id='9e370598-1285-4ec9-9294-1030fbc1fbd5', theaterId='58e5f76b7b78610001eb2630', movieId='c0352cff-4677-4e09-a023-dfd78d66566c', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='9e370598-1285-4ec9-9294-1030fbc1fbd5', theaterId='58e5f76b7b78610001eb2630', movieId='c0352cff-4677-4e09-a023-dfd78d66566c', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "ShowDTO{id='9e370598-1285-4ec9-9294-1030fbc1fbd5', theaterId='58e5f76b7b78610001eb2630', movieId='c0352cff-4677-4e09-a023-dfd78d66566c', start=1490524200000, end=1490531400000, emptySeat=21}", 
+        "", 
+        "  @order_endpoint_/tickets/{orderId}_POST @order_endpoint_/book_POST @theater_endpoint_/show_POST @movie_endpoint_/_POST @theater_endpoint_/_POST", 
+        "  Scenario: Pick up tickets                    \u001b[90m# ntou/soselab/movie/ticket.feature:23\u001b[0m", 
+        "    \u001b[32mGiven \u001b[0m\u001b[32mthe show exist:\u001b[0m                      \u001b[90m# OrderTest.the_show_exist(Timetable>)\u001b[0m", 
+        "    \u001b[32mAnd \u001b[0m\u001b[32mBen has a order which is not picked up\u001b[0m \u001b[90m# OrderTest.ben_has_a_order_which_is_not_picked_up()\u001b[0m", 
+        "    \u001b[32mWhen \u001b[0m\u001b[32mThe Ben pick the ticket\u001b[0m               \u001b[90m# OrderTest.the_Ben_pick_the_ticket()\u001b[0m", 
+        "    \u001b[32mThen \u001b[0m\u001b[32mSuccessful pick up the ticket\u001b[0m         \u001b[90m# OrderTest.successful_pick_up_the_ticket()\u001b[0m", 
+        "", 
+        "\u001b[31mFailed scenarios:\u001b[0m", 
+        "\u001b[31mntou/soselab/movie/movieTimetable.feature:12 \u001b[0m# Scenario: View Movie Timetable", 
+        "", 
+        "7 Scenarios (\u001b[31m1 failed\u001b[0m, \u001b[32m6 passed\u001b[0m)", 
+        "33 Steps (\u001b[31m1 failed\u001b[0m, \u001b[36m1 skipped\u001b[0m, \u001b[32m31 passed\u001b[0m)", 
+        "0m3.432s", 
+        "", 
+        "org.junit.ComparisonFailure: expected:<[2]00> but was:<[5]00>", 
+        "\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)", 
+        "\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)", 
+        "\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)", 
+        "\tat ntou.soselab.movie.TimetableTest.i_view_timetable(TimetableTest.java:71)", 
+        "\tat ✽.When I view timetable(ntou/soselab/movie/movieTimetable.feature:14)", 
+        "", 
+        ":regression FAILED", 
+        "", 
+        "BUILD FAILED", 
+        "", 
+        "Total time: 4.682 secs", 
+        "uplaod command", 
+        "curl -X POST -H \"Content-Type: multipart/form-data\" -F \"file=@./build/cucumber/cucumber.json\" http://192.168.33.10:4000/api/test/uat"
+    ]
+}
+
+PLAY RECAP *********************************************************************
+192.168.33.10              : ok=55   changed=29   unreachable=0    failed=0   
+
+Thursday 06 April 2017  16:08:14 +0800 (0:00:00.031)       0:23:10.374 ******** 
+=============================================================================== 
+mgp : build container ------------------------------------------------- 570.99s
+test : unit test ------------------------------------------------------ 212.23s
+movie : build all jar ------------------------------------------------- 198.36s
+mgp : build mgpback spring boot ---------------------------------------- 70.75s
+test : uat test -------------------------------------------------------- 46.32s
+angstwad.docker_ubuntu : Install pip, python-dev package with apt ------ 40.31s
+test : service test ---------------------------------------------------- 32.72s
+mgp : run container ---------------------------------------------------- 30.88s
+support : run pact broker docker and db -------------------------------- 30.58s
+angstwad.docker_ubuntu : Install pip, setuptools, docker-py and docker-compose with pip -- 29.74s
+test : set pact broker and uat git repo -------------------------------- 24.54s
+support : build pact db docker container ------------------------------- 20.08s
+angstwad.docker_ubuntu : Install (or update) docker package ------------ 18.07s
+williamyeh.oracle-java : get JDK tarball (as tar.gz file) -------------- 14.03s
+angstwad.docker_ubuntu : Add Docker repository and update apt cache ---- 13.31s
+movie : build example docker container --------------------------------- 12.60s
+williamyeh.oracle-java : install JDK via tarball file ------------------- 7.44s
+movie : run docker ------------------------------------------------------ 3.49s
+install curl ------------------------------------------------------------ 2.82s
+angstwad.docker_ubuntu : HTTPS APT transport for Docker repository ------ 2.24s
+
+==> default: Machine 'default' has a post `vagrant up` message. This is a message
+==> default: from the creator of the Vagrantfile, and not from Vagrant itself:
+==> default: 
+==> default: Vanilla Debian box. See https://atlas.hashicorp.com/debian/ for help and bug reports

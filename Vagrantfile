@@ -40,5 +40,6 @@ Vagrant.configure("2") do |config|
     ansible.playbook = "provisioning/playbook.yml"
     ansible.inventory_path = "provisioning/hosts"
     ansible.sudo = true
+    ansible.config_file = "provisioning/ansible.cfg"
   end
 end
