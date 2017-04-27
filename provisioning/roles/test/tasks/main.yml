@@ -44,10 +44,10 @@
     export USER_HOST=192.168.33.10
     export USER_PORT=8082
     export ZUUL_URL=http://192.168.33.10:8080/
-    export TARGET=movie && ./gradlew clean configure pactVerify; sh ./uploadReport.sh
-    export TARGET=user && ./gradlew clean configure pactVerify; sh ./uploadReport.sh
-    export TARGET=order && ./gradlew clean configure pactVerify; sh ./uploadReport.sh
-    export TARGET=theater && ./gradlew clean configure pactVerify; sh ./uploadReport.sh
+    export TARGET=movie && node index.js sh ./uploadReport.sh
+    export TARGET=user && node index.js sh ./uploadReport.sh
+    export TARGET=order && node index.js sh ./uploadReport.sh
+    export TARGET=theater && node index.js sh ./uploadReport.sh
   args:
     chdir: /vagrant/movie-example/movie-service-test
   register: service
@@ -70,10 +70,10 @@
     export USER_HOST=192.168.33.10
     export USER_PORT=8082
     export ZUUL_URL=http://192.168.33.10:8080/
-    export TARGET=movie && ./gradlew clean regression ; sh ./uploadReport.sh
-    export TARGET=user && ./gradlew clean regression ; sh ./uploadReport.sh
-    export TARGET=order && ./gradlew clean regression ; sh ./uploadReport.sh
-    export TARGET=theater && ./gradlew clean regression ; sh ./uploadReport.sh
+    export TARGET=movie && node index.js ; sh ./uploadReport.sh
+    export TARGET=user && node index.js ; sh ./uploadReport.sh
+    export TARGET=order && node index.js ; sh ./uploadReport.sh
+    export TARGET=theater && node index.js ; sh ./uploadReport.sh
   args:
     chdir: /vagrant/movie-example/movie-uat
   register: uat
