@@ -13,15 +13,6 @@
     export PACT_URL=http://192.168.33.10:8880/
     export DB_HOST=192.168.33.10
     export TARGET=movie
-    export MOVIE_HOST=192.168.33.10
-    export MOVIE_PORT=8081
-    export ORDER_HOST=192.168.33.10
-    export ORDER_PORT=8083
-    export THEATER_HOST=192.168.33.10
-    export THEATER_PORT=8084
-    export USER_HOST=192.168.33.10
-    export USER_PORT=8082
-    export ZUUL_URL=http://192.168.33.10:8080/
     sudo -E bash -c 'sh ./runAllTest.sh'
   args:
     chdir: /vagrant/movie-example
@@ -43,11 +34,10 @@
     export THEATER_PORT=8084
     export USER_HOST=192.168.33.10
     export USER_PORT=8082
-    export ZUUL_URL=http://192.168.33.10:8080/
-    export TARGET=movie && node index.js sh ./uploadReport.sh
-    export TARGET=user && node index.js sh ./uploadReport.sh
-    export TARGET=order && node index.js sh ./uploadReport.sh
-    export TARGET=theater && node index.js sh ./uploadReport.sh
+    export TARGET=movie && node index.js; sh ./uploadReport.sh
+    export TARGET=user && node index.js; sh ./uploadReport.sh
+    export TARGET=order && node index.js; sh ./uploadReport.sh
+    export TARGET=theater && node index.js; sh ./uploadReport.sh
   args:
     chdir: /vagrant/movie-example/movie-service-test
   register: service
@@ -58,17 +48,6 @@
 - name: uat test 
   shell: |
     export MGP=192.168.33.10:4000
-    export PACT_URL=http://192.168.33.10:8880/
-    export DB_HOST=192.168.33.10
-    export TARGET=movie
-    export MOVIE_HOST=192.168.33.10
-    export MOVIE_PORT=8081
-    export ORDER_HOST=192.168.33.10
-    export ORDER_PORT=8083
-    export THEATER_HOST=192.168.33.10
-    export THEATER_PORT=8084
-    export USER_HOST=192.168.33.10
-    export USER_PORT=8082
     export ZUUL_URL=http://192.168.33.10:8080/
     export TARGET=movie && node index.js ; sh ./uploadReport.sh
     export TARGET=user && node index.js ; sh ./uploadReport.sh
