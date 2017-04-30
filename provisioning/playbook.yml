@@ -6,6 +6,14 @@
         name: curl
         state: present
 
+    - name: setup nodejs
+      shell: curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+    
+    - name: install nodejs
+      apt:
+        name: nodejs
+        state: present
+        
 - hosts: server
   roles:
      - williamyeh.oracle-java
