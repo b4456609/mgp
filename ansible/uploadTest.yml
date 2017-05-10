@@ -1,0 +1,13 @@
+---
+- hosts: server
+  vars:
+    work_dir: /home/ubuntu/mgp
+  tasks:
+  - name: upload test
+    shell: |
+      export MGP=localhost:4000
+      export PACT_URL=http://localhost:8880/
+      export DB_HOST=localhost
+      sh ./runAllTest.sh
+    args:
+      chdir: "{{ work_dir }}/movie-example"
