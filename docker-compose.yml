@@ -23,7 +23,7 @@ services:
     networks:
       - inside
   bdd:
-    build: ../mgp-bdd
+    build: ./mgp-bdd
     ports:
       - "3005:3005"
     networks:
