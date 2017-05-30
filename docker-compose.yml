@@ -3,7 +3,7 @@ services:
   front:
     build: ./haproxy
     ports:
-      - "80:80"
+      - "4000:80"
     links:
       - api
       - web
