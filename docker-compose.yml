@@ -22,12 +22,12 @@ services:
       - "3001:3001"
     networks:
       - inside
-  bdd:
-    build: ./mgp-bdd
-    ports:
-      - "3005:3005"
-    networks:
-      - inside
+  # bdd:
+  #   build: ./mgp-bdd
+  #   ports:
+  #     - "3005:3005"
+  #   networks:
+  #     - inside
   report:
     build: ./mgp-cucumber-report
     ports:
@@ -43,12 +43,12 @@ services:
     links:
       - mongo
       - neo
-      - bdd
+      # - bdd
     environment:
       - MONGO_DB=mongo
       - NEO4J_DB=http://neo:7474
       - CODEGEN_HOST=http://codegen:3001/
-      - BDD_HOST=http://bdd:3005
+      - BDD_HOST=http://192.168.11.13:3005
       - DEBUG_LEVEL=INFO
     depends_on:
       - mongo
