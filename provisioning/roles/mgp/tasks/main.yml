@@ -1,15 +1,15 @@
 ---
   - name: build mgpback spring boot
-    shell: ./gradlew bootRepackage
+    shell: ./gradlew clean && ./gradlew bootRepackage
     args:
       chdir: "/vagrant/mgp-back"
 
   - name: build container
     shell: docker-compose -f ./docker-compose_tea.yml build
     args:
-      chdir: "/vagrant/mgp-front"
+      chdir: "/vagrant/"
 
   - name: run container
     shell: docker-compose -f ./docker-compose_tea.yml up -d
     args:
-      chdir: "/vagrant/mgp-front"
+      chdir: "/vagrant/"
