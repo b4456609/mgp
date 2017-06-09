@@ -1,0 +1,158 @@
+---
+- hosts: server
+  vars:
+    work_dir: /home/ubuntu/mgp
+    host: 140.121.102.164
+  tasks:
+  - name: set pact broker and uat git repo 
+    shell: |
+      curl -i --request POST --url http://{{ host }}:4000/api/setting --header 'content-type: application/json' --data '{"pactHostUrl": "http://{{ host }}:8880/", "bddGitUrl": "https://github.com/b4456609/movie-uat.git"}'
+      curl -i --request POST http://{{ host }}:4000/api/update
+    register: setting
+
+  - debug: var=setting.stdout_lines
+
+  - name: unit test 
+    shell: |
+      export MGP={{ host }}:4000
+      export PACT_URL=http://{{ host }}:8880/
+      export DB_HOST={{ host }}
+      export TARGET=movie
+      sudo -E bash -c 'sh ./runAllTest.sh'
+    args:
+      chdir: "{{work_dir}}/movie-example"
+    register: unit
+
+  - debug: var=unit.stdout_lines
+
+  - name: service test
+    shell: |
+      docker build -t servicetest .
+      docker run --rm \
+        -e MGP=140.121.102.164:4000 \
+        -e PACT_URL=http://140.121.102.164:8880/ \
+        -e DB_HOST=140.121.102.164 \
+        -e MOVIE_HOST=140.121.102.164 \
+        -e MOVIE_PORT=8081 \
+        -e ORDER_HOST=140.121.102.164 \
+        -e ORDER_PORT=8083 \
+        -e THEATER_HOST=140.121.102.164 \
+        -e THEATER_PORT=8084 \
+        -e USER_HOST=140.121.102.164 \
+        -e USER_PORT=8082 \
+        -e ZUUL_URL=http://140.121.102.164:8080/ \
+        -e TARGET=movie \
+        servicetest
+      docker run --rm \
+        -e MGP=140.121.102.164:4000 \
+        -e PACT_URL=http://140.121.102.164:8880/ \
+        -e DB_HOST=140.121.102.164 \
+        -e MOVIE_HOST=140.121.102.164 \
+        -e MOVIE_PORT=8081 \
+        -e ORDER_HOST=140.121.102.164 \
+        -e ORDER_PORT=8083 \
+        -e THEATER_HOST=140.121.102.164 \
+        -e THEATER_PORT=8084 \
+        -e USER_HOST=140.121.102.164 \
+        -e USER_PORT=8082 \
+        -e ZUUL_URL=http://140.121.102.164:8080/ \
+        -e TARGET=theater \
+        servicetest
+      docker run --rm \
+        -e MGP=140.121.102.164:4000 \
+        -e PACT_URL=http://140.121.102.164:8880/ \
+        -e DB_HOST=140.121.102.164 \
+        -e MOVIE_HOST=140.121.102.164 \
+        -e MOVIE_PORT=8081 \
+        -e ORDER_HOST=140.121.102.164 \
+        -e ORDER_PORT=8083 \
+        -e THEATER_HOST=140.121.102.164 \
+        -e THEATER_PORT=8084 \
+        -e USER_HOST=140.121.102.164 \
+        -e USER_PORT=8082 \
+        -e ZUUL_URL=http://140.121.102.164:8080/ \
+        -e TARGET=user \
+        servicetest
+      docker run --rm \
+        -e MGP=140.121.102.164:4000 \
+        -e PACT_URL=http://140.121.102.164:8880/ \
+        -e DB_HOST=140.121.102.164 \
+        -e MOVIE_HOST=140.121.102.164 \
+        -e MOVIE_PORT=8081 \
+        -e ORDER_HOST=140.121.102.164 \
+        -e ORDER_PORT=8083 \
+        -e THEATER_HOST=140.121.102.164 \
+        -e THEATER_PORT=8084 \
+        -e USER_HOST=140.121.102.164 \
+        -e USER_PORT=8082 \
+        -e ZUUL_URL=http://140.121.102.164:8080/ \
+        -e TARGET=order \
+        servicetest
+      
+      docker run --rm \
+        -e MGP=140.121.102.164:4000 \
+        -e PACT_URL=http://140.121.102.164:8880/ \
+        -e DB_HOST=140.121.102.164 \
+        -e MOVIE_HOST=140.121.102.164 \
+        -e MOVIE_PORT=8082 \
+        -e ORDER_HOST=140.121.102.164 \
+        -e ORDER_PORT=8084 \
+        -e THEATER_HOST=140.121.102.164 \
+        -e THEATER_PORT=8083 \
+        -e USER_HOST=140.121.102.164 \
+        -e USER_PORT=8081 \
+        -e ZUUL_URL=http://140.121.102.164:8080/ \
+        -e TARGET=theater \
+        servicetest
+    args:
+      chdir:  "{{work_dir}}/movie-example/movie-service-test"
+    register: service
+    tags:
+      - st
+
+  - debug: var=service.stdout_lines
+
+
+  - name: uat test 
+    shell: |
+      docker build -t uat:latest .
+      docker run --rm \
+        -e MGP={{ host }}:4000 \ 
+        -e ZUUL_URL=http://{{ host }}:8080/ \
+        -e NUM=1 \
+        -e TARGET=theater\
+        uat:latest
+      docker run --rm \
+        -e MGP={{ host }}:4000 \ 
+        -e ZUUL_URL=http://{{ host }}:8080/ \
+        -e NUM=1 \
+        -e TARGET=user\
+        uat:latest
+      docker run --rm \
+        -e MGP={{ host }}:4000 \ 
+        -e ZUUL_URL=http://{{ host }}:8080/ \
+        -e NUM=1 \
+        -e TARGET=order\
+        uat:latest
+      docker run --rm \
+        -e MGP={{ host }}:4000 \ 
+        -e ZUUL_URL=http://{{ host }}:8080/ \
+        -e NUM=1 \
+        -e TARGET=movie\
+        uat:latest
+
+      for file in `find ./example -type f  -name '*.json'`;
+      do
+          FILE="-F \"files=@$file\""
+          COMMAND="curl -i -X POST -H \"Content-Type: multipart/form-data\" $FILE http://{{ host }}:4000/api/test/uat"
+          eval ${COMMAND}
+      done
+    args:
+      chdir: "{{work_dir}}/movie-example/movie-uat"
+    register: uat
+    tags:
+      - uat
+
+  - debug: var=uat.stdout_lines
+    tags:
+      - uat

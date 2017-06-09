@@ -6,7 +6,7 @@
     clone: yes
     update: yes
     force: yes
-    version: v2
+    version: master
     
 - name: build mgpback spring boot
   tags: back
