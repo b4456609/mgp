@@ -7,7 +7,7 @@
 # you're doing.
 Vagrant.configure("2") do |config|
   
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = "server"
   config.vm.network "private_network", ip: "192.168.33.10"
 
