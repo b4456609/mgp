@@ -1,6 +1,6 @@
 ---
 - name: build all jar
-  shell: sh ./buildAll_async.sh
+  shell: sh ./buildAll.sh
   args:
     chdir: /vagrant/movie-example
 
