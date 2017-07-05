@@ -34,9 +34,9 @@ Vagrant.configure("2") do |config|
     # Display the VirtualBox GUI when booting the machine
     # vb.gui = true
     vb.name = "server"
-    vb.cpus = 4
+    vb.cpus = 6
     # Customize the amount of memory on the VM:
-    vb.memory = "8192"
+    vb.memory = "6144"
   end
 
   config.vm.provision "ansible" do |ansible|

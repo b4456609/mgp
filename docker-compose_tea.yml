@@ -1,4 +1,4 @@
-version: '2'
+version: '3.3'
 services:
   front:
     build: ./haproxy
@@ -50,6 +50,7 @@ services:
       - CODEGEN_HOST=http://codegen:3001/
       - BDD_HOST=http://bdd:3005
       - DEBUG_LEVEL=INFO
+      - JAVA_OPTS=-Xmx256m
     depends_on:
       - mongo
       - neo
@@ -66,6 +67,8 @@ services:
       - "7687"
     environment:
       - NEO4J_AUTH=none
+      - NEO4J_CACHE_MEMORY=128M
+      - NEO4J_HEAP_MEMORY=512M
     networks:
       - inside
 networks:
