@@ -1,5 +1,7 @@
 # mgp
 
+![Deployment Diagram](deployment.png)
+
 ```
 mgp : build mgpback spring boot ----------- 70.75s
 mgp : build container -------------------- 570.99s
